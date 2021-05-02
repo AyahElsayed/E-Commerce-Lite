@@ -1,7 +1,7 @@
 import React from 'react';
-import {Home} from './Containters/Home';
-import {Products} from './Containters/Products';
-import {About} from './Containters/About';
+import {Home} from './containters/Home';
+import {Products} from './containters/Products';
+import {About} from './containters/About';
 
 export const routes = [
     {path: '/products', exact: true, name: 'Products', component: Products},
