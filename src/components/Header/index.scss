@@ -1,0 +1,52 @@
+// Header top background-color #340EC1
+// Header search background-color #4D25E0
+
+.header_top{
+    background-color: #340EC1;
+    height: 60px;
+    color: #fff;
+    .container{
+        width:80%;
+        margin:auto;
+        display:flex;
+        padding-top: 20px;
+        position: relative;
+        .shipping{
+            flex:4;
+            position: relative;
+            opacity: 0.9;
+            .desc{
+                font-size: 12px;
+                margin-left: 30px;
+            }
+            .icon{
+                position: absolute;
+                font-size: 20px;
+            }
+        }
+        .subscribe{
+            flex:1;
+            background-color: #0D0724;
+            height: 40px;
+            width: 215px;
+            border-radius: 10px;
+            font-size: 12px;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            .content{
+                padding-top: 11px;
+                span {
+                    opacity: .8;
+                }
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: bolder;
+
+                }
+            }
+        }
+    }
+}
