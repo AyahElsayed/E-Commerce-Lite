@@ -47,15 +47,15 @@ export const Header = () => {
 
                     <div className="search_bar">
                         <div className="dropdown">
-                            <button onClick={handleDropdown}>
+                            <button onClick={handleDropdown} className="btn_dropdown">
                                 All products <span className="icon"><IoIosArrowDown /></span>
                             </button>
                             {showMenu
                                 ?
                                 <div className="menu">
-                                    <button>Fashion</button>
-                                    <button>Electronics</button>
-                                    <button>Furniture</button>
+                                    <button className="btn_menu">Fashion</button>
+                                    <button className="btn_menu">Electronics</button>
+                                    <button className="btn_menu">Furniture</button>
                                 </div>
                                 : ''}
 
@@ -73,8 +73,8 @@ export const Header = () => {
                             </button>
                             {showMenuAccount ?
                                 <div className="menu">
-                                    <button>profile</button>
-                                    <button>setting</button>
+                                    <button className="btn_menu">profile</button>
+                                    <button className="btn_menu">setting</button>
                                 </div>
                                 : ''}
                         </div>
@@ -87,8 +87,8 @@ export const Header = () => {
                             </button>
                             {showMenuLang ?
                                 <div className="menu">
-                                    <button>Eng</button>
-                                    <button>Ar</button>
+                                    <button className="btn_menu">Eng</button>
+                                    <button className="btn_menu">Ar</button>
                                 </div>
                                 : ""}
                         </div>

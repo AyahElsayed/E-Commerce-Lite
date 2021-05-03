@@ -76,7 +76,7 @@
             display:flex;
             margin-top: 15px;
             justify-content: center;
-            button{
+            .btn_dropdown{
                 height: 40px;
                 background-color: #0D0724;
                 color: #fff;
@@ -108,6 +108,19 @@
                 border-radius: 8px
                 
             }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                .btn_menu{
+                    height: 30px;
+                    border-style: none;
+                    background-color: #00000094;
+                    color: #fff;
+                    &:hover{
+                        background-color: #000;
+                    }
+                }
+            }
         }
         .account{
             margin-top: 22px;
@@ -131,6 +144,20 @@
                     margin: 2px 9px;
                 }
             }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                margin-top: 6px;
+                .btn_menu{
+                    color: #fff;
+                    background-color: #00000094;
+                    height: 30px;
+                    &:hover{
+                        background: #000;
+
+                    }
+                }
+            }
         }
         .lang{
             margin-top: 22px;
@@ -146,6 +173,20 @@
                     width: 20px;
                     height: 20px;
                     border-radius: 50%;
+                }
+                .menu{
+                    display: flex;
+                flex-direction: column;
+                margin-top: 6px;
+                .btn_menu{
+                    color: #fff;
+                    background-color: #00000094;
+                    height: 30px;
+                    &:hover{
+                        background: #000;
+
+                    }
+                }
                 }
             }
             .cart{
@@ -167,5 +208,6 @@
         }
     }
 }
+
 
 
