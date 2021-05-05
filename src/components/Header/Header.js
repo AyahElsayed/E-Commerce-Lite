@@ -22,7 +22,7 @@ export const Header = () => {
     }
     return (
         <>
-            <header className="header_top">
+            <header className="header-top">
                 <div className="container">
                     <div className="shipping">
                         <span className="icon"><MdLocalShipping /></span>
@@ -104,9 +104,9 @@ export const Header = () => {
                             }
                         </div>
                         <div className="cart">
-                            <span className="icon"><FiShoppingCart /></span>
-                            <span>cart</span>
-                            <span className="items">0</span>
+                            <span className="icon cart-item"><FiShoppingCart /></span>
+                            <span className="cart-item">cart</span>
+                            <span className="items cart-item">0</span>
                         </div>
                     </div>
                 </div>

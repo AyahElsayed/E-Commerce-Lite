@@ -3,19 +3,22 @@
 
 
 
-.header_top{
+.header-top{
     background-color: #340EC1;
-    // height: 60px;
+    height: 60px;
     color: #fff;
     display: flex;
+    flex: 1;
     .container{
-        height: 60px;
-        flex-basis:60%;
+        // height: 60px;
+        // flex-basis:60%;
+        flex: 1;
+        justify-content: space-around;
         margin:auto;
         align-items: center;
         display:flex;
         .shipping{
-            flex:4;
+            // flex:3;
             opacity: 0.9;
             display: flex;
             align-items: center;
@@ -28,13 +31,12 @@
             }
         }
         .subscribe{
-            flex:1;
+            // flex:1;
             background-color: #0D0724;
             height: 40px;
             border-radius: 10px;
             font-size: 12px;
             text-align: center;
-            flex-basis: 50px;
             align-items: center;
             display: flex;
             justify-content: center;
@@ -58,24 +60,29 @@
     height: 90px;
     color: #fff;
     display: flex;
+    flex: 1;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     .container{
-        flex-basis:60%;
+        // flex-basis:60%;
+        // margin:auto;
+        flex: 1;
+        justify-content: space-around;
         margin:auto;
-        display:flex;
-        // position: relative;
         align-items: center;
+        display:flex;
         .logo{
             flex: 1;
             font-size: 27px;
             font-weight: 300;
-            // margin: 10px;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 89px;
             .subLogo{
                 font-weight: 500;
             }
         }
         .search_bar{
-            flex: 3;
+            flex: 1;
             display:flex;
             // margin-top: 15px;
             justify-content: center;
@@ -83,14 +90,13 @@
             .dropdown{
                 display: flex;
                 align-items: center;
-                position: relative;
+                // position: relative;
             }
             .btn_dropdown{
                 height: 40px;
                 background-color: #0D0724;
                 color: #fff;
                 border-radius: 8px 0 0 8px;
-                flex-basis: 104px;
                 font-size: 12px;
                 margin-right: -4px;
                 border-style: none;
@@ -105,19 +111,18 @@
             }
             input{
                 height: 34px !important;
-                flex-basis: 217px;
+                flex: 2;
                 padding-left: 7px;
             }
             .icon_search{
                 box-sizing: border-box;
-                flex-basis: 30px;
                 background-color: #fff;
                 color: #000;
                 height: 38px;
                 margin: 0px -1px;
-                padding-top: 9px;
+                padding-top: 11px;
                 border-radius: 0 8px 8px 0;
-                
+                padding-right: 11px;
             }
             .menu{
                 display: flex;
@@ -137,11 +142,9 @@
             }
         }
         .account{
-            flex:1;
+            // flex:1;
             display: flex;
             justify-content: center;
-            // border-right: 1.5px solid #e9e3e373;
-            // margin: 20px 0;
             button {
                 background-color: transparent;
                 color: #fff;
@@ -151,10 +154,11 @@
                 font-weight: 600;
             }
             .dropdown{
-                
-                padding: 0 16px;
-                flex-basis: 83px;
-                position: relative;
+                flex: 1;
+                padding: 0 26px;
+                // position: relative;
+                display: flex;
+                justify-content: center;    
                 .icon{
                     position: absolute;
                     display: inline-block;
@@ -188,6 +192,7 @@
         .lang{
             // margin-top: 22px;
             display: flex;
+            flex: 1;
             .flag{
                 margin: 0 6px;
                 display: flex;
@@ -195,7 +200,8 @@
                 .icon {
                     background: transparent;
                     color: #fff;
-                    border: none
+                    border: none;
+                    flex: 1;
                 }
                 img{
                     width: 20px;
@@ -227,7 +233,7 @@
                 .icon{
                     margin-right: 8px;
                 }
-                span{
+                .cart-item{
                     display: inline-block;
                     margin-right: 5px;
                     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -236,10 +242,8 @@
                 .items{
                     background-color: #000;
                     border-radius: 50%;
-                    padding: 3px 5px;
+                    padding: 5px 4px;
                     font-size: 12px;
-                    width: 10px;
-                    height: 12px;
                     text-align: center;
                 }
             }
