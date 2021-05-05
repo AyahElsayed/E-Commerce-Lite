@@ -7,22 +7,22 @@ import { FiShoppingCart } from 'react-icons/fi'
 
 
 export const Header = () => {
-    const [showMenu, setShowMenu] = useState(false)
-    const [showMenuAccount, setShowMenuAccount] = useState(false)
-    const [showMenuLang, setShowMenuLang] = useState(false)
+    const [isMenuShown, setIsMenuShown] = useState(false)
+    const [isAccountMenuShown, setIsAccountMenuShown] = useState(false)
+    const [isLanguageMenuShown  , setIsLanguageMenuShown] = useState(false)
 
-    const handleDropdown = () => {
-        setShowMenu(!showMenu)
+    const toggleDropDown = () => {
+        setIsMenuShown(!isMenuShown)
     }
-    const handleDropdownAccount = () => {
-        setShowMenuAccount(!showMenuAccount)
+    const toggleAccountDropDown = () => {
+        setIsAccountMenuShown(!isAccountMenuShown)
     }
-    const handleDropdownLang = () => {
-        setShowMenuLang(!showMenuLang)
+    const toggleLanguageDropDown = () => {
+        setIsLanguageMenuShown  (!isLanguageMenuShown  )
     }
     return (
-        <div>
-            <div className="header_top">
+        <>
+            <header className="header_top">
                 <div className="container">
                     <div className="shipping">
                         <span className="icon"><MdLocalShipping /></span>
@@ -30,67 +30,78 @@ export const Header = () => {
                     </div>
                     <div className="subscribe">
                         <div className="content">
-                            <span>Don't miss out.</span>
-                            <a href="#"> Subscribe Now</a>
+                            <span className="hint">Don't miss out.</span>
+                            <a href="#" className="subscribe_link"> Subscribe Now</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
             {/* /////////////////////// */}
 
-            <div className="header_search_bar">
+            <header className="header_search_bar">
                 <div className="container">
-                    <p className="logo">
-                        store<span>logo</span>
-                    </p>
+                    <div className="logo">
+                        store<span className="subLogo">logo</span>
+                    </div>
 
                     <div className="search_bar">
                         <div className="dropdown">
-                            <button onClick={handleDropdown} className="btn_dropdown">
+                            <button 
+                            onClick={toggleDropDown} 
+                            className="btn_dropdown"
+                            onBlur={()=>setIsMenuShown(false)}
+                            >
                                 All products <span className="icon"><IoIosArrowDown /></span>
                             </button>
-                            {showMenu
-                                ?
+                            {isMenuShown &&
                                 <div className="menu">
                                     <button className="btn_menu">Fashion</button>
                                     <button className="btn_menu">Electronics</button>
                                     <button className="btn_menu">Furniture</button>
                                 </div>
-                                : ''}
+                            }
 
                         </div>
                         <input placeholder="Enter keywords" />
-                        <p className="icon">
+                        <p className="icon_search">
                             <span><BsSearch /></span>
                         </p>
                     </div>
 
                     <div className="account">
                         <div className="dropdown">
-                            <button onClick={handleDropdownAccount}>
+                            <button 
+                            onClick={toggleAccountDropDown}
+                            onBlur={()=>setIsAccountMenuShown(false)}
+                            >
                                 Account <span className="icon"><IoIosArrowDown /></span>
                             </button>
-                            {showMenuAccount ?
+                            {isAccountMenuShown &&
                                 <div className="menu">
                                     <button className="btn_menu">profile</button>
                                     <button className="btn_menu">setting</button>
                                 </div>
-                                : ''}
+                            }
                         </div>
                     </div>
+                    <div className="line"></div>
                     <div className="lang">
                         <div className="flag">
-                            <img src="./assets/flag.png" alt="lang" />
-                            <button className="icon" onClick={handleDropdownLang}>
+                            <div className="img"><img src="./assets/flag.png" alt="lang" /></div>
+                            <button 
+                            className="icon" 
+                            onClick={toggleLanguageDropDown}
+                            onBlur={()=>setIsLanguageMenuShown  (false)}
+                            >
                                 <span ><IoIosArrowDown /></span>
                             </button>
-                            {showMenuLang ?
+                            {isLanguageMenuShown   &&
                                 <div className="menu">
                                     <button className="btn_menu">Eng</button>
                                     <button className="btn_menu">Ar</button>
                                 </div>
-                                : ""}
+                            }
                         </div>
                         <div className="cart">
                             <span className="icon"><FiShoppingCart /></span>
@@ -99,7 +110,7 @@ export const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </header>
+        </>
     );
 };

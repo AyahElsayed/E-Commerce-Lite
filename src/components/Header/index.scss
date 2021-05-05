@@ -5,48 +5,48 @@
 
 .header_top{
     background-color: #340EC1;
-    height: 60px;
+    // height: 60px;
     color: #fff;
+    display: flex;
     .container{
-        width:80%;
+        height: 60px;
+        flex-basis:60%;
         margin:auto;
+        align-items: center;
         display:flex;
-        padding-top: 20px;
-        position: relative;
         .shipping{
             flex:4;
-            position: relative;
             opacity: 0.9;
+            display: flex;
+            align-items: center;
             .desc{
                 font-size: 12px;
-                margin-left: 30px;
             }
             .icon{
-                position: absolute;
                 font-size: 20px;
+                margin-right: 7px;
             }
         }
         .subscribe{
             flex:1;
             background-color: #0D0724;
             height: 40px;
-            width: 215px;
             border-radius: 10px;
             font-size: 12px;
             text-align: center;
-            position: absolute;
-            right: 0;
-            top: 10px;
+            flex-basis: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
             .content{
-                padding-top: 11px;
-                span {
+                // padding-top: 11px;
+                .hint {
                     opacity: .8;
                 }
-                a{
+                .subscribe_link{
                     text-decoration: none;
                     color: #fff;
                     font-weight: bolder;
-
                 }
             }
         }
@@ -55,62 +55,76 @@
 
 .header_search_bar{
     background-color: #4D25E0;
-    height: 70px;
+    height: 90px;
     color: #fff;
+    display: flex;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     .container{
-        width:80%;
+        flex-basis:60%;
         margin:auto;
         display:flex;
-        position: relative;
+        // position: relative;
+        align-items: center;
         .logo{
             flex: 1;
             font-size: 27px;
             font-weight: 300;
-            margin: 10px;
-            span{
+            // margin: 10px;
+            .subLogo{
                 font-weight: 500;
             }
         }
         .search_bar{
             flex: 3;
             display:flex;
-            margin-top: 15px;
+            // margin-top: 15px;
             justify-content: center;
+            align-items: center;
+            .dropdown{
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
             .btn_dropdown{
                 height: 40px;
                 background-color: #0D0724;
                 color: #fff;
-                border-radius: 8px;
-                width: 130px;
+                border-radius: 8px 0 0 8px;
+                flex-basis: 104px;
                 font-size: 12px;
-                margin-right: -7px;
+                margin-right: -4px;
                 border-style: none;
-                span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 11px;
+                .icon{
                     display: inline-block;
-                    position: absolute;
                     margin: 2px 6px;
                 }
             }
             input{
                 height: 34px !important;
-                width: 300px;
-                padding-left: 14px;
+                flex-basis: 217px;
+                padding-left: 7px;
             }
-            p{
+            .icon_search{
                 box-sizing: border-box;
-                width: 31px;
+                flex-basis: 30px;
                 background-color: #fff;
                 color: #000;
                 height: 38px;
-                margin: 1px -10px;
+                margin: 0px -1px;
                 padding-top: 9px;
-                border-left: 36px;
-                border-radius: 8px
+                border-radius: 0 8px 8px 0;
                 
             }
             .menu{
                 display: flex;
                 flex-direction: column;
+                position: absolute;
+                top: 36px;
+                width: 100%;
                 .btn_menu{
                     height: 30px;
                     border-style: none;
@@ -123,22 +137,25 @@
             }
         }
         .account{
-            margin-top: 22px;
             flex:1;
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            // border-right: 1.5px solid #e9e3e373;
+            // margin: 20px 0;
             button {
                 background-color: transparent;
                 color: #fff;
                 border-style: none;
                 font-size: 15px;
+                font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 600;
             }
             .dropdown{
-                border-right: 1.5px solid #e9e3e373;
+                
                 padding: 0 16px;
-                width: 90px;
-                span{
+                flex-basis: 83px;
+                position: relative;
+                .icon{
                     position: absolute;
                     display: inline-block;
                     margin: 2px 9px;
@@ -148,6 +165,8 @@
                 display: flex;
                 flex-direction: column;
                 margin-top: 6px;
+                position: absolute;
+                width: 69%;
                 .btn_menu{
                     color: #fff;
                     background-color: #00000094;
@@ -159,11 +178,20 @@
                 }
             }
         }
+        .line{
+            content: "";
+            width: 1px;
+            background: #f9f6f645;
+            height: 36px;
+            margin-right: 10px;
+        }
         .lang{
-            margin-top: 22px;
+            // margin-top: 22px;
             display: flex;
             .flag{
                 margin: 0 6px;
+                display: flex;
+                position: relative;
                 .icon {
                     background: transparent;
                     color: #fff;
@@ -176,32 +204,42 @@
                 }
                 .menu{
                     display: flex;
-                flex-direction: column;
-                margin-top: 6px;
+                    flex-direction: column;
+                    margin-top: 6px;
+                    position: absolute;
+                    top: 23px;
                 .btn_menu{
+                    background-color: transparent;
+                    color: #fff;
+                    border-style: none;
+                    font-size: 15px;
                     color: #fff;
                     background-color: #00000094;
                     height: 30px;
                     &:hover{
                         background: #000;
-
                     }
                 }
                 }
             }
             .cart{
+                display: flex;
                 .icon{
                     margin-right: 8px;
                 }
                 span{
                     display: inline-block;
                     margin-right: 5px;
+                    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: 500;
                 }
                 .items{
                     background-color: #000;
-                    width: 22px;
-                    height: 22px;
                     border-radius: 50%;
+                    padding: 3px 5px;
+                    font-size: 12px;
+                    width: 10px;
+                    height: 12px;
                     text-align: center;
                 }
             }
