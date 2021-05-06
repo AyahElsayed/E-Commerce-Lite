@@ -27,7 +27,7 @@
             }
             .icon{
                 font-size: 20px;
-                margin-right: 7px;
+                margin-right: 7px; // TODO fix
             }
         }
         .subscribe{
@@ -41,7 +41,7 @@
             display: flex;
             justify-content: center;
             .content{
-                margin: 9px;
+                margin: 9px; // TODO fix
                 .hint {
                     opacity: .8;
                 }
@@ -76,7 +76,7 @@
             font-weight: 300;
             display: flex;
             justify-content: flex-end;
-            margin-right: 89px;
+            margin-right: 89px; // TODO fix
             .subLogo{
                 font-weight: 500;
             }
@@ -98,21 +98,21 @@
                 color: #fff;
                 border-radius: 8px 0 0 8px;
                 font-size: 12px;
-                margin-right: -4px;
+                margin-right: -4px; // TODO fix
                 border-style: none;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding-left: 11px;
+                padding-left: 11px; // TODO fix
                 .icon{
                     display: inline-block;
-                    margin: 2px 6px;
+                    margin: 2px 6px; // TODO fix
                 }
             }
             input{
                 height: 34px !important;
                 flex: 2;
-                padding-left: 7px;
+                padding-left: 7px; // TODO fix
             }
             .icon_search{
                 box-sizing: border-box;
@@ -120,9 +120,9 @@
                 color: #000;
                 height: 38px;
                 margin: 0px -1px;
-                padding-top: 11px;
+                padding-top: 11px; // TODO fix
                 border-radius: 0 8px 8px 0;
-                padding-right: 11px;
+                padding-right: 11px; // TODO fix
             }
             .menu{
                 display: flex;
@@ -155,29 +155,28 @@
             }
             .dropdown{
                 flex: 1;
-                padding: 0 26px;
+                padding: 0 26px; // TODO fix
                 // position: relative;
                 display: flex;
                 justify-content: center;    
                 .icon{
                     position: absolute;
                     display: inline-block;
-                    margin: 2px 9px;
+                    margin: 2px 9px; // TODO fix
                 }
             }
             .menu{
                 display: flex;
                 flex-direction: column;
-                margin-top: 6px;
+                margin-top: 6px; // TODO fix
                 position: absolute;
-                width: 69%;
+                width: 69%; // TODO fix
                 .btn_menu{
                     color: #fff;
                     background-color: #00000094;
                     height: 30px;
                     &:hover{
                         background: #000;
-
                     }
                 }
             }
@@ -187,14 +186,14 @@
             width: 1px;
             background: #f9f6f645;
             height: 36px;
-            margin-right: 10px;
+            margin-right: 10px; // TODO fix
         }
         .lang{
             // margin-top: 22px;
             display: flex;
             flex: 1;
             .flag{
-                margin: 0 6px;
+                margin: 0 6px; // TODO fix
                 display: flex;
                 position: relative;
                 .icon {
@@ -211,9 +210,8 @@
                 .menu{
                     display: flex;
                     flex-direction: column;
-                    margin-top: 6px;
                     position: absolute;
-                    top: 23px;
+                    top: 28px;
                 .btn_menu{
                     background-color: transparent;
                     color: #fff;
@@ -231,20 +229,22 @@
             .cart{
                 display: flex;
                 .icon{
-                    margin-right: 8px;
+                    margin-right: 8px; // TODO fix
                 }
                 .cart-item{
                     display: inline-block;
-                    margin-right: 5px;
+                    margin-right: 5px; // TODO fix
                     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
                     font-weight: 500;
                 }
                 .items{
                     background-color: #000;
                     border-radius: 50%;
-                    padding: 5px 4px;
+                    padding: 0 8px; // TODO fix
                     font-size: 12px;
                     text-align: center;
+                    display: flex;
+                    align-items: center
                 }
             }
         }
