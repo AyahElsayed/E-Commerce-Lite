@@ -1,0 +1,13 @@
+{
+  "homeHeroViews": [
+    {
+      "id": 1,
+      "promotion_text":  "Text",
+      "title":  "Title",
+      "description": "Description",
+      "bg_image":  "path/to/image",
+      "action_link": "link",
+      "assistant_image": "path/to/image"
+    }
+  ]
+}
