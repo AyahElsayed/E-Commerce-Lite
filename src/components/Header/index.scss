@@ -17,6 +17,7 @@
         margin:auto;
         align-items: center;
         display:flex;
+        width: 65%;
         .shipping{
             // flex:3;
             opacity: 0.9;
@@ -63,20 +64,19 @@
     flex: 1;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     .container{
-        // flex-basis:60%;
-        // margin:auto;
-        flex: 1;
+        // flex: 1;
         justify-content: space-around;
         margin:auto;
         align-items: center;
         display:flex;
+        width: 65%;
         .logo{
             flex: 1;
             font-size: 27px;
             font-weight: 300;
             display: flex;
-            justify-content: flex-end;
-            margin-right: 89px; // TODO fix
+            // justify-content: flex-end;
+            // margin-right: 89px; // TODO fix
             .subLogo{
                 font-weight: 500;
             }
