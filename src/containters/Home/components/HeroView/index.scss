@@ -1,13 +1,12 @@
 .HeroView{
     height: 655px;
     background-color: #321F96;
-    margin: 0;
-    padding: 0;
+    display:flex;
     .container{
-        width:62%;
+        width:65%;
         margin:auto;
         display:flex;
-        padding-top: 30px;
+        align-items: center;
         .content{
             flex: 1;
         }
@@ -16,29 +15,30 @@
             text-transform: uppercase;
             font-size: 13px;
             font-weight: 500;
+            margin-bottom: 0;
         }
         .title{
             color:#fff;
             font-size: 57px;
             margin-top: 0;
+            margin-bottom: 0;
         }
         .desc{
             color:#fff;
-            width: 311px;
+            width: 67%;
             opacity: 0.9;
             font-weight: 100;
-            margin-bottom: 50px;
+            margin-bottom: 10%;
         }
         .mainBtn{
             color: #025D75;
             font-size: 15px;
             font-weight: 600;
-            // width: 154px;
             height: 46px;
             background: linear-gradient(90deg, rgba(235,155,143,1) 33%, rgba(235,127,103,0.9668067055923932) 100%); 
             border-radius: 7px;
             border-style: none;
-            margin-bottom: 20px;
+            margin-bottom: 10%;
             &:hover{
                 opacity:.8;
             }
@@ -48,8 +48,8 @@
             height: 75px;
             display: flex;
             flex: 1;
-            padding-left: 15px;
-            margin-top: 45px;
+            padding-left: 5%;
+            margin-top: 10%;
             .content-assistant{
                 display: flex;
                 align-items: center;
@@ -61,7 +61,7 @@
             }
             span{
                 font-size: 14px;
-                padding-left: 12px;
+                padding-left: 9px;
                 color: #fff;
                 opacity: .9;
                 font-weight: 400;

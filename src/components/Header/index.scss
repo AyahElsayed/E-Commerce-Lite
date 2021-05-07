@@ -10,8 +10,6 @@
     display: flex;
     flex: 1;
     .container{
-        // height: 60px;
-        // flex-basis:60%;
         flex: 1;
         justify-content: space-around;
         margin:auto;
@@ -82,15 +80,13 @@
             }
         }
         .search_bar{
-            flex: 1;
+            flex: 2;
             display:flex;
-            // margin-top: 15px;
             justify-content: center;
             align-items: center;
             .dropdown{
                 display: flex;
                 align-items: center;
-                // position: relative;
             }
             .btn_dropdown{
                 height: 40px;
@@ -142,7 +138,7 @@
             }
         }
         .account{
-            // flex:1;
+            flex:1;
             display: flex;
             justify-content: center;
             button {
@@ -156,7 +152,6 @@
             .dropdown{
                 flex: 1;
                 padding: 0 26px; // TODO fix
-                // position: relative;
                 display: flex;
                 justify-content: center;    
                 .icon{
@@ -189,9 +184,9 @@
             margin-right: 10px; // TODO fix
         }
         .lang{
-            // margin-top: 22px;
             display: flex;
             flex: 1;
+            justify-content: flex-end;
             .flag{
                 margin: 0 6px; // TODO fix
                 display: flex;
