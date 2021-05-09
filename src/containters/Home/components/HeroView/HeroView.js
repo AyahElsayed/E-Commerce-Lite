@@ -6,7 +6,7 @@ const HeroView = () => {
     return (
         <div>
             <div className="HeroView">
-                <div className="container">
+                <div className="container content-container">
                     <div className="content">
                         <p className="hint">
                             25% off promotional sale

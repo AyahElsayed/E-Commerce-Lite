@@ -8,14 +8,13 @@
     height: 60px;
     color: #fff;
     display: flex;
-    flex: 1;
+    // flex: 1;
     .container{
         flex: 1;
         justify-content: space-around;
         margin:auto;
         align-items: center;
         display:flex;
-        width: 65%;
         .shipping{
             // flex:3;
             opacity: 0.9;
@@ -59,22 +58,17 @@
     height: 90px;
     color: #fff;
     display: flex;
-    flex: 1;
+    // flex: 1;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     .container{
-        // flex: 1;
         justify-content: space-around;
         margin:auto;
         align-items: center;
-        display:flex;
-        width: 65%;
         .logo{
             flex: 1;
             font-size: 27px;
             font-weight: 300;
             display: flex;
-            // justify-content: flex-end;
-            // margin-right: 89px; // TODO fix
             .subLogo{
                 font-weight: 500;
             }
@@ -138,7 +132,7 @@
             }
         }
         .account{
-            flex:1;
+            flex: .8;
             display: flex;
             justify-content: center;
             button {
@@ -181,12 +175,12 @@
             width: 1px;
             background: #f9f6f645;
             height: 36px;
-            margin-right: 10px; // TODO fix
+            margin: 0 1%;
         }
         .lang{
             display: flex;
             flex: 1;
-            justify-content: flex-end;
+            justify-content: space-around;
             .flag{
                 margin: 0 6px; // TODO fix
                 display: flex;
