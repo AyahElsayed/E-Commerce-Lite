@@ -40,7 +40,7 @@ export const Header = () => {
             {/* /////////////////////// */}
 
             <header className="header_search_bar">
-                <div className="container">
+                <div className="container content-container">
                     <div className="logo">
                         store<span className="subLogo">logo</span>
                     </div>

@@ -6,9 +6,9 @@ import {Content} from './Content';
 
 export const Layout = () => {
   return (
-      <div>
+      <div className="main-container">
           <Header />
-          {/* <Content /> */}
+          <Content />
           {/* <Footer /> */}
       </div>
   );

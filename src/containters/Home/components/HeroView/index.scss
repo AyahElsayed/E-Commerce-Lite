@@ -1,0 +1,81 @@
+.HeroView{
+    height: 655px;
+    background-color: #321F96;
+    .container{
+        padding-top: 5%;
+    }
+    .content-container{
+        .content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hint{
+            color:#d28f84;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        .title{
+            color:#fff;
+            font-size: 57px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .desc{
+            color:#fff;
+            opacity: 0.9;
+            font-weight: 100;
+            margin-bottom: 10%; // TODO fix
+            padding-right: 35%; // TODO fix
+        }
+        .mainBtn{
+            color: #262929;
+            font-size: 15px;
+            font-weight: 600;
+            height: 46px;
+            background: linear-gradient(90deg, rgba(240,126,108,1) 29%, rgba(228,89,58,0.9668067055923932) 100%); 
+            border-radius: 7px;
+            border-style: none;
+            margin-bottom: 10%; // TODO fix
+            &:hover{
+                opacity:.8;
+            }
+        }
+        .assistant{
+            border-left: 1px solid #e7e7dc38;
+            height: 75px;
+            display: flex;
+            flex: 1;
+            padding-left: 5%; // TODO fix
+            margin-top: 10%; // TODO fix
+            .content-assistant{
+                display: flex;
+                align-items: center;
+            }
+            img{
+                width: 43px;
+                border: 2px solid #bbb2b2;
+                border-radius: 50%;
+            }
+            span{
+                font-size: 14px;
+                padding-left: 9px;
+                color: #fff;
+                opacity: .9;
+                font-weight: 400;
+            }
+            .icon{
+                display: flex;
+            }
+        }
+        .mainImg{
+            flex: 1;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
