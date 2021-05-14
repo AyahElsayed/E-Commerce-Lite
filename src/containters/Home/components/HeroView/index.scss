@@ -28,8 +28,8 @@
             color:#fff;
             opacity: 0.9;
             font-weight: 100;
-            margin-bottom: 10%;
-            padding-right: 35%;
+            margin-bottom: 10%; // TODO fix
+            padding-right: 35%; // TODO fix
         }
         .mainBtn{
             color: #262929;
@@ -39,7 +39,7 @@
             background: linear-gradient(90deg, rgba(240,126,108,1) 29%, rgba(228,89,58,0.9668067055923932) 100%); 
             border-radius: 7px;
             border-style: none;
-            margin-bottom: 10%;
+            margin-bottom: 10%; // TODO fix
             &:hover{
                 opacity:.8;
             }
@@ -49,8 +49,8 @@
             height: 75px;
             display: flex;
             flex: 1;
-            padding-left: 5%;
-            margin-top: 10%;
+            padding-left: 5%; // TODO fix
+            margin-top: 10%; // TODO fix
             .content-assistant{
                 display: flex;
                 align-items: center;
