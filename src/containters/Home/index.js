@@ -5,7 +5,6 @@ import { heroView } from "./services/heroView";
 import HeroView from './components/HeroView/HeroView';
 
 export const Home = () => {
-
     const [heroViewData, setHeroViewData] = useState({});
 
     useEffect(() => {
@@ -14,6 +13,7 @@ export const Home = () => {
         // other API 0.7
         // TOTAL :
         Promise.all([heroView()]).then(res => {
+            setHeroViewData(res[0].data);
             // console.log('heroView', res[0].data);
         }).catch((error) => {
             // console.log('heroView error', error);
@@ -21,6 +21,6 @@ export const Home = () => {
     }, []);
 
     return <div className="">
-        <HeroView />
+        <HeroView  heroViewData={heroViewData}/>
     </div>;
 };
