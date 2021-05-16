@@ -45,11 +45,13 @@ const HeroView = (props) => {
 };
 
 HeroView.propTypes = {
-    promotion_text: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    action_link: PropTypes.string,
-    assistant_image: PropTypes.string,
-    bg_image: PropTypes.string,
-}
+    heroViewData: PropTypes.shape({
+        promotion_text: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string,
+        action_link: PropTypes.string,
+        assistant_image: PropTypes.string,
+        bg_image: PropTypes.string,
+    })
+};
 export default HeroView
