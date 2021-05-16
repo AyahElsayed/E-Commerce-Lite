@@ -5,18 +5,18 @@ import { useEffect, useState } from 'react';
 import { heroView } from '../../services/heroView';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 const HeroView = () => {
-    const [heroViewData, setHeroViewData] = useState('');
-    
+    const [heroViewData, setHeroViewData] = useState({});
+
     useEffect(() => {
         Promise.all([heroView()])
             .then(res => {
                 // console.log('heroView', res[0].data);
-                setHeroViewData(res[0].data)
-                console.log(heroViewData)
+                setHeroViewData(res[0].data);
+                console.log(heroViewData);
             }).catch((error) => {
                 console.log('heroView error', error);
             });
-    }, [])
+    }, []);
     return (
         <Router>
             <div>
@@ -54,6 +54,6 @@ const HeroView = () => {
             </div>
         </Router>
     )
-}
+};
 
 export default HeroView
