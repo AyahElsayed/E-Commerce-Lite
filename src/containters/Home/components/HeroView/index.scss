@@ -40,6 +40,9 @@
             border-radius: 7px;
             border-style: none;
             margin-bottom: 10%; // TODO fix
+            a{
+                text-decoration: none;
+            }
             &:hover{
                 opacity:.8;
             }

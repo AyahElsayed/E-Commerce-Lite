@@ -14,9 +14,9 @@ export const Home = () => {
         // other API 0.7
         // TOTAL :
         Promise.all([heroView()]).then(res => {
-            console.log('heroView', res[0].data);
+            // console.log('heroView', res[0].data);
         }).catch((error) => {
-            console.log('heroView error', error);
+            // console.log('heroView error', error);
         });
     }, []);
 
