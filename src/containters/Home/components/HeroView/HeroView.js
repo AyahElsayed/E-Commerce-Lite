@@ -1,27 +1,18 @@
-import React from 'react'
-import './index.scss'
-import { IoIosArrowForward } from 'react-icons/io'
+import React from 'react';
+import './index.scss';
+import { IoIosArrowForward } from 'react-icons/io';
 import { useEffect, useState } from 'react';
 import { heroView } from '../../services/heroView';
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 const HeroView = () => {
-    const [promotionText, setPromotionText] = useState('')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [bgImage, setBgImage] = useState('')
-    const [actionLink, setActionLink] = useState('')
-    const [assistantImage, setAssistantImage] = useState('')
-
+    const [heroViewData, setHeroViewData] = useState('');
+    
     useEffect(() => {
         Promise.all([heroView()])
             .then(res => {
-                console.log('heroView', res[0].data);
-                setPromotionText(res[0].data.promotion_text)
-                setTitle(res[0].data.title)
-                setDescription(res[0].data.description)
-                setBgImage(res[0].data.bg_image)
-                setAssistantImage(res[0].data.assistant_image)
-                setActionLink(res[0].data.action_link)
+                // console.log('heroView', res[0].data);
+                setHeroViewData(res[0].data)
+                console.log(heroViewData)
             }).catch((error) => {
                 console.log('heroView error', error);
             });
@@ -33,30 +24,30 @@ const HeroView = () => {
                     <div className="container content-container">
                         <div className="content">
                             <p className="hint">
-                                {promotionText}
+                                {heroViewData.promotion_text}
                             </p>
                             <h1 className="title">
-                                {title}
+                                {heroViewData.title}
                             </h1>
                             <p className="desc">
-                                {description}
+                                {heroViewData.description}
                             </p>
                             <button className="mainBtn">
-                                <Link to={actionLink}>
+                                <Link to={heroViewData.action_link}>
                                     Browse Products
                                 </Link>
                             </button>
                             <div className="assistant">
                                 <div className="content-assistant">
-                                    <img src={assistantImage} alt="assistantImg" />
+                                    <img src={heroViewData.assistant_image} alt="assistantImg" />
                                     <span>Talk to an assistant</span>
                                     <span className="icon"><IoIosArrowForward /></span>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="mainImg">
-                            <img src={bgImage} alt="mainImg" />
+                            <img src={heroViewData.bg_image} alt="mainImg" />
                         </div>
                     </div>
                 </div>
