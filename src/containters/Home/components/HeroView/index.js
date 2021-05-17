@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.scss';
 import { IoIosArrowForward } from 'react-icons/io';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 const HeroView = (props) => {
-    const { heroViewData } = props
+    const { heroViewData } = props;
     return (
-        <Router>
             <div>
                 <div className="HeroView">
                     <div className="container content-container">
@@ -24,7 +24,7 @@ const HeroView = (props) => {
                                 className="mainBtn"
                                 to={heroViewData.action_link}>
                                 Browse Products
-                                </Link>
+                            </Link>
                             <div className="assistant">
                                 <div className="content-assistant">
                                     <img src={heroViewData.assistant_image} alt="assistantImg" />
@@ -40,7 +40,6 @@ const HeroView = (props) => {
                     </div>
                 </div>
             </div>
-        </Router>
     )
 };
 
