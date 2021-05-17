@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import './index.scss';
 import { heroView } from "./services/heroView";
 import HeroView from './components/HeroView';
+import CategoryList from "./components/CategoryList";
 
 export const Home = () => {
     const [heroViewData, setHeroViewData] = useState({});
@@ -17,5 +18,6 @@ export const Home = () => {
 
     return <div className="">
         <HeroView  heroViewData={heroViewData}/>
+        <CategoryList />
     </div>;
 };
