@@ -1,15 +1,12 @@
 .CategoryList{
-    // background-color: red;
     display: flex;
-    height: 466px;
+    height: 320px;
     .mid-card{
-        margin: 0 3% !important;
+        margin: 0 5% !important;
         width: auto !important;
     }
     .slider-container{
         display: block;
-
-
         .slick-prev, .slick-next {
             background: #968181;
             z-index: 99999;
@@ -39,7 +36,6 @@
                 color: #a7a5c5;
                 font-size: 14px;
                 margin-top: 4px;
-
             }
             .mainBtn{
                 display: flex;

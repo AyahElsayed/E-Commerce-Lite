@@ -9,5 +9,62 @@
       "action_link": "/BrowseProducts",
       "assistant_image": "./assets/assistant.png"
     }
+  ],
+
+  "homeCategoryList":[
+    {
+      "id":1,
+      "title":"Fashion",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/Shoe.JPG"
+    },
+    {
+      "id":2,
+      "title":"Electronics",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/headphone.JPG"
+    },
+    {
+      "id":3,
+      "title":"Furniture",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/chair.jpg"
+    },
+    {
+      "id":4,
+      "title":"Beauty products",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/cosmetic.png"
+    },
+    {
+      "id":5,
+      "title":"Kitchen",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/kitchen.png"
+    },
+    {
+      "id":6,
+      "title":"Toys",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/Toys.png"
+    },
+    {
+      "id":7,
+      "title":"Jewelry",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/ring.png"
+    },
+    {
+      "id":8,
+      "title":"Perfumes",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/Perfumes.png"
+    },
+    {
+      "id":9,
+      "title":"Books",
+      "description": "commodo dolor sit amet cum diceam est un partuient",
+      "image":"./assets/Books.png"
+    }
   ]
 }

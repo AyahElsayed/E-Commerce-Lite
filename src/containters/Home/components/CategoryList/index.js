@@ -6,15 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const CategoryList = () => {
+const CategoryList = (props) => {
+
+    const {categoryListData} = props;
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
-        // variableWidth: true,
-    }
+    };
     return (
         <>
             <div className="CategoryList">
@@ -25,7 +26,8 @@ const CategoryList = () => {
                             <div className="card">
                                 <div className="content">
                                     <h3 className="title">
-                                        Fashion
+                                        
+                                        {categoryListData.title}
                                     </h3>
                                     <p className="desc">
                                         commodo dolor sit amet cum diceam est un partuient
@@ -37,7 +39,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/Shoe.JPG" alt="shoes" />
                                 </div>
@@ -58,7 +59,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/headphone.JPG" alt="headphone" />
                                 </div>
@@ -79,7 +79,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/chair.jpg" alt="chair" />
                                 </div>
@@ -100,7 +99,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/cosmetic.png" alt="beauty" />
                                 </div>
@@ -121,7 +119,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/kitchen.png" alt="kitchen" />
                                 </div>
@@ -142,7 +139,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/Toys.png" alt="Toys" />
                                 </div>
@@ -163,7 +159,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/ring.png" alt="ring" />
                                 </div>
@@ -184,7 +179,6 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/Perfumes.png" alt="Perfumes" />
                                 </div>
@@ -205,29 +199,16 @@ const CategoryList = () => {
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="img">
                                     <img src="./assets/Books.png" alt="Books" />
                                 </div>
                             </div>
                         </Slider>
                     </div>
-
-
-
-
-
-
-
                 </div>
-
             </div>
-
-
-
-
         </>
     )
 };
 
-export default CategoryList
+export default CategoryList;
