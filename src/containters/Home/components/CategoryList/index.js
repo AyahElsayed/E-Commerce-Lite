@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PropTypes from 'prop-types';
 
+export const CategoryList = (props) => {
 
-const CategoryList = (props) => {
-
-    const {categoryListData} = props;
+    const { categoryListData } = props;
     const settings = {
         dots: true,
         infinite: true,
@@ -22,193 +22,49 @@ const CategoryList = (props) => {
                 <div className="content-container slider-container">
                     <div className="">
                         <Slider {...settings}>
-                            {/* /////1//// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        
-                                        {categoryListData.title}
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/fashion" >
-                                            Shop Now
+                            {categoryListData.map((card, index) =>
+                                <div
+                                    className={`card  ${index === 1 || 4 || 7 ? 'mid-card' : ''}`}
+                                    key={card.id}>
+                                    <div className="content">
+                                        <h3 className="title">
+                                            {card.title}
+                                        </h3>
+                                        <p className="desc">
+                                            {card.description}
+                                        </p>
+                                        <div className="mainBtn">
+                                            <Link
+                                                to={card.action_link} >
+                                                Shop Now
                                         </Link>
+                                        </div>
+                                    </div>
+                                    <div className="img">
+                                        <img
+                                            src={card.image}
+                                            alt={card.alt_value}
+                                        />
                                     </div>
                                 </div>
-                                <div className="img">
-                                    <img src="./assets/Shoe.JPG" alt="shoes" />
-                                </div>
-                            </div>
-                            {/* /////2///// */}
-                            <div className="card mid-card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        Electronics
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/electronics" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/headphone.JPG" alt="headphone" />
-                                </div>
-                            </div>
-                            {/* /////3////// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        Furniture
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/furniture" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/chair.jpg" alt="chair" />
-                                </div>
-                            </div>
-                            {/* //////4///////// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        Beauty products
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/BeautyProducts" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/cosmetic.png" alt="beauty" />
-                                </div>
-                            </div>
-                            {/* /////5///// */}
-                            <div className="card mid-card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        Kitchen
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/kitchen" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/kitchen.png" alt="kitchen" />
-                                </div>
-                            </div>
-                            {/* /////6////// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                        Toys
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/Toys" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/Toys.png" alt="Toys" />
-                                </div>
-                            </div>
-                            {/* ////7///// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                    Jewelry
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/Jewelry" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/ring.png" alt="ring" />
-                                </div>
-                            </div>
-                            {/* /////8///// */}
-                            <div className="card mid-card">
-                                <div className="content">
-                                    <h3 className="title">
-                                    Perfumes
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/Perfumes" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/Perfumes.png" alt="Perfumes" />
-                                </div>
-                            </div>
-                            {/* /////9////// */}
-                            <div className="card">
-                                <div className="content">
-                                    <h3 className="title">
-                                    Books
-                                    </h3>
-                                    <p className="desc">
-                                        commodo dolor sit amet cum diceam est un partuient
-                                    </p>
-                                    <div className="mainBtn">
-                                        <Link
-                                            to="/Books" >
-                                            Shop Now
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="img">
-                                    <img src="./assets/Books.png" alt="Books" />
-                                </div>
-                            </div>
+                            )}
                         </Slider>
                     </div>
                 </div>
             </div>
         </>
     )
+};
+
+CategoryList.propTypes = {
+    categoryListData: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+        description: PropTypes.string,
+        action_link: PropTypes.string,
+        image: PropTypes.string,
+        alt_value: PropTypes.string,
+    })
 };
 
 export default CategoryList;

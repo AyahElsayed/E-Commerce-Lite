@@ -8,26 +8,20 @@ import { categoryList } from './services/categoryList';
 
 export const Home = () => {
     const [heroViewData, setHeroViewData] = useState({});
-    const [categoryListData, setCategoryListData] = useState({});
-    // const [categoryListId, setCategoryListId] = useState(1);
+    const [categoryListData, setCategoryListData] = useState([]);
 
 
-    // useEffect for Hero View
     useEffect(() => {
-        Promise.all([heroView()]).then(res => {
-            setHeroViewData(res[0].data);
+        heroView().then(heroViewData => {
+            console.log('heroViewData', heroViewData.data);
+            setHeroViewData(heroViewData.data);
         }).catch((error) => {
             console.log('heroView error', error);
         });
-    }, []);
 
-    // useEffect for categoryList
-    useEffect(() => {
-        Promise.all([categoryList()]).then(res => {
-            console.log('categoryList', res[0].data[0].title)
-            setCategoryListData(res[0].data);
-            // console.log(categoryListId)
-            // setCategoryListId('iddd',res[0].data)
+        categoryList().then(categoryListData => {
+            console.log('categoryList', categoryListData.data);
+            setCategoryListData(categoryListData.data);
         }).catch((error) => {
             console.log('categoryList error', error);
         });
@@ -35,6 +29,6 @@ export const Home = () => {
 
     return <div className="">
         <HeroView  heroViewData={heroViewData}/>
-        <CategoryList categoryListData={categoryListData} />
+        {categoryListData.length > 0 && <CategoryList categoryListData={categoryListData} />}
     </div>;
 };
