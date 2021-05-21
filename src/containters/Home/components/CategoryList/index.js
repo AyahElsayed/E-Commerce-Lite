@@ -25,7 +25,7 @@ export const CategoryList = (props) => {
                         <Slider {...settings}>
                             {categoryListData.map((card, index) =>
                                 <div
-                                    className={`card  ${ (index -1) % 3 === 0 ? 'mid-card' : ''}`}
+                                    className={`home_category_card  ${ (index -1) % 3 === 0 ? 'home_category_mid_card' : ''}`}
                                     key={card.id}>
                                     <div className="home_category_content">
                                         <h3 className="home_category_title">
