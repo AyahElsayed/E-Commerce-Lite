@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
 
 export const CategoryList = (props) => {
@@ -16,6 +16,7 @@ export const CategoryList = (props) => {
         slidesToShow: 3,
         slidesToScroll: 3,
     };
+
     return (
         <>
             <div className="CategoryList">
@@ -26,21 +27,21 @@ export const CategoryList = (props) => {
                                 <div
                                     className={`card  ${index === 1 || 4 || 7 ? 'mid-card' : ''}`}
                                     key={card.id}>
-                                    <div className="content">
-                                        <h3 className="title">
+                                    <div className="home_category_content">
+                                        <h3 className="home_category_title">
                                             {card.title}
                                         </h3>
-                                        <p className="desc">
+                                        <p className="home_category_desc">
                                             {card.description}
                                         </p>
-                                        <div className="mainBtn">
+                                        <div className="home_category_mainBtn">
                                             <Link
                                                 to={card.action_link} >
                                                 Shop Now
                                         </Link>
                                         </div>
                                     </div>
-                                    <div className="img">
+                                    <div className="home_category_img">
                                         <img
                                             src={card.image}
                                             alt={card.alt_value}

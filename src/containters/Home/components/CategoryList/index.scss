@@ -23,20 +23,20 @@
         display: flex !important;
         min-height: 200px;
         border-radius: 12px;
-        .content{
+        .home_category_content{
             padding-left: 7%;
             display: flex;
             flex-direction: column;
-            .title{
+            .home_category_title{
                 color: #200E66;
                 margin-bottom: 0;
             }
-            .desc{
+            .home_category_desc {
                 color: #a7a5c5;
                 font-size: 14px;
                 margin-top: 4px;
             }
-            .mainBtn{
+            .home_category_mainBtn{
                 display: flex;
                 flex: 1;
                 align-items: center;
@@ -59,7 +59,7 @@
                 }
             }
         }
-        .img{
+        .home_category_img{
             display: flex;
             align-items: center;
                 img{
