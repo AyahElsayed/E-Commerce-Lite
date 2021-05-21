@@ -16,7 +16,7 @@ export const Home = () => {
     const override = css`
         display: block;
         margin: 0 auto;
-        border-color: red;
+        border-color: #36D7B7;
         `;
 
     useEffect(() => {

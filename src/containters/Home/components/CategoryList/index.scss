@@ -27,6 +27,7 @@
             padding-left: 7%;
             display: flex;
             flex-direction: column;
+            flex: 3;
             .home_category_title{
                 color: #200E66;
                 margin-bottom: 0;
@@ -62,9 +63,9 @@
         .home_category_img{
             display: flex;
             align-items: center;
+            flex:1;
                 img{
-                width: 73px;
-                height: 80%
+                width: 100%;
             }
         }
     }
