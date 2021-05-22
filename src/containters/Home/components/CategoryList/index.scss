@@ -71,3 +71,38 @@
         }
     }
 }
+.next_arrow {
+    font-size: 18px;
+    background: #fff;
+    color:#555;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 18px 1px #e0dada; 
+}
+.prev_arrow{
+    font-size: 18px;
+    background: #fff;
+    color:#555;
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 18px 1px #e0dada;
+    z-index: 9999;
+}
