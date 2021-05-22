@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const HeroView = (props) => {
+export const HeroView = (props) => {
     const { heroViewData } = props;
     return (
             <div>
