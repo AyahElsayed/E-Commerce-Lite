@@ -9,7 +9,7 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 export const CategoryList = (props) => {
 
-    function SampleNextArrow(props) {
+    function NextArrow(props) {
         const { onClick } = props;
         return (
             <div className="next_arrow"
@@ -20,7 +20,7 @@ export const CategoryList = (props) => {
         );
     }
 
-    function SamplePrevArrow(props) {
+    function PrevArrow(props) {
         const { onClick } = props;
         return (
             <div
@@ -39,8 +39,8 @@ export const CategoryList = (props) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     };
 
     return (
