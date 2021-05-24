@@ -7,6 +7,7 @@ import { CategoryList } from "./components/CategoryList";
 import { categoryList } from './services/categoryList';
 import { css } from '@emotion/core';
 import ClipLoader from 'react-spinners/ClipLoader';
+import { DiscountsList } from "./components/DiscountsList";
 
 export const Home = () => {
     const [heroViewData, setHeroViewData] = useState({});
@@ -48,6 +49,8 @@ export const Home = () => {
             :
             categoryListData.length > 0 && <CategoryList categoryListData={categoryListData} />
         }
+
+        <DiscountsList />
     </div>;
 };
 

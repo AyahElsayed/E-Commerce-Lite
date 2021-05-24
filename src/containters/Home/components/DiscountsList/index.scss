@@ -1,0 +1,130 @@
+.DiscountsList{
+    display: flex;
+    // height: 80vh;
+    height: 500px;
+    .slider_container{
+        display:block;
+    }
+    .DiscountsList_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header_title{
+            font-size: 29px;
+            color: #1c0671
+            }
+        .all_products{
+            font-size: 10px;
+            font-weight: 700;
+            a{
+                text-decoration: none;
+                color: #1c0671
+            }
+        }
+    }
+    .DiscountsList_body{
+        // display:flex;
+        justify-content: space-between;
+        min-height: 80vh;
+        .DiscountsList_card{
+            display: flex !important;
+            flex-direction: column;
+            box-shadow: 1px 7px 9px 1px #d2c9c975;
+            border-radius: 8px;
+            width: 85% !important;
+            margin: auto;
+            margin-bottom: 12px;
+            padding: 0 4%;
+            .DiscountsList_card_content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 261px;
+                .flash_deal_wrapper{
+                    position: absolute;
+                    top: 32px;
+                    background-color: #ED67A7;
+                    border-radius: 8px;
+                    padding: 5px;
+                    .flash_deal{
+                        color: #fff;
+                        font-size: 11px;
+                        font-weight: 500;
+                        display:flex;
+                    }
+                }
+                .image{
+                    flex: 1;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    img{
+                        max-width: 100%;
+                    }
+                }
+                .brand{
+                    align-items: flex-end;
+                    display: flex;
+                    flex:4;
+                    font-size: 13px;
+                    color: #b5aeae;
+                    font-weight: 500;  
+                }
+                .body_title{
+                    font-size: 12px;
+                    color: #170854;
+                    font-weight: 500;
+                    flex: 1;
+                }
+                .rate{
+                    flex:1;
+                    display: flex;
+                    align-items: center;
+                    .rate_count{
+                        font-size: 12px;
+                    }    
+                }
+                .price{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: 17px;
+                    flex: 1;
+                    justify-content: space-between;
+                    color:#0d131d;
+                    .discount_price{
+                        flex: 1;
+                        font-size: 12px;
+                        color: #bdb2b2;
+                        text-decoration: line-through;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .stock_count{
+                    font-size: 11px;
+                    flex: 4;
+
+                }
+            }
+            .discount_amount{
+                background-color: #6FE09B;
+                display: flex;
+                align-items: center;
+                align-self: flex-start;
+                border-radius: 8px;
+                font-size: 13px;
+                min-height: 28px;
+                padding: 0 5px;
+                color: #fff;
+                .discount_amount_icon{
+                    margin: 5px 5px 0 0px;
+                }
+            }
+            
+        }
+    }
+}
+.slider-container{
+    display:block;
+}
