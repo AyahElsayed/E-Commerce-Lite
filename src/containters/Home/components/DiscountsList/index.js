@@ -8,7 +8,7 @@ import { TiFlash } from 'react-icons/ti';
 import { IconContext } from "react-icons";
 import { Link } from 'react-router-dom';
 
-export const DiscountsList = () => {
+export const DiscountsList = (props) => {
 
     function NextArrow(props) {
         const { onClick } = props;
@@ -52,60 +52,80 @@ export const DiscountsList = () => {
         ),
     };
 
-return (
-    <div className="DiscountsList">
-        <div className="content-container slider_container ">
-            <div className="DiscountsList_header">
-                <h3 className="header_title">
-                    Recent Discounts
+    const { discountListData } = props;
+
+
+    return (
+        <div className="DiscountsList">
+            <div className="content-container slider_container ">
+                <div className="DiscountsList_header">
+                    <h3 className="header_title">
+                        Recent Discounts
                     </h3>
-                <div className="all_products">
-                    <Link
-                        to="/DiscountsList/allProducts" >
-                        View All Products
+                    <div className="all_products">
+                        <Link
+                            to="/DiscountsList/allProducts" >
+                            View All Products
                         </Link>
-                </div>
-            </div>
-
-            <div className="DiscountsList_body slider_container">
-                <Slider {...settings}>
-                    {/* ///1///////// */}
-                    <div className="DiscountsList_card">
-                        <div className="discount_amount">
-                            <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <IoMdAperture />
-                                </div>
-                            </IconContext.Provider>
-                                save $100
-                        </div>
-                        <div className="DiscountsList_card_content">
-                            <div className="flash_deal">
-
-                            </div>
-                            <div className="image">
-                                <img src="./assets/laptop2.JPG" alt="" />
-                            </div>
-                            <div className="brand">
-                                ASUS
-                            </div>
-                            <div className="body_title">
-                                ASUS ZenBook pro duo UX581GV
-                            </div>
-                            <div className="rate">
-                                *****
-                                <span className="rate_count">4.5(20)</span>
-                            </div>
-                            <div className="price">
-                                $2,899,99 <span className="discount_price">$3,000,00</span>
-                            </div>
-                            <div className="stock_count">
-                                32 available in stock
-                            </div>
-                        </div>
                     </div>
-                    {/* /////////2/////// */}
-                    <div className="DiscountsList_card">
+                </div>
+
+                <div className="DiscountsList_body slider_container">
+                    <Slider {...settings}>
+                        {discountListData.map((card) =>
+                            <div className="DiscountsList_card">
+                                <div className="discount_amount">
+                                    <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
+                                        <div>
+                                            <IoMdAperture />
+                                        </div>
+                                    </IconContext.Provider>
+                                    save ${card.discount_amount}
+                                </div>
+                                <div className="DiscountsList_card_content">
+                                    {card.flash_deal === "true" ?
+                                        <div className="flash_deal_wrapper">
+                                            <div className="flash_deal">
+                                                <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
+                                                    <div>
+                                                        <TiFlash />
+                                                    </div>
+                                                </IconContext.Provider>
+                                                FLASH DEAL
+                                            </div>
+                                        </div>
+                                        : ""
+                                    }
+                                    <div className="image">
+                                        <img src={card.image} alt="" />
+                                    </div>
+                                    <div className="brand">
+                                        {card.brand}
+                                    </div>
+                                    <div className="body_title">
+                                        {card.title}
+                                    </div>
+                                    <div className="rate">
+                                        *****
+                                <span className="rate_count">{card.rate_count}</span>
+                                    </div>
+                                    <div className="price">
+                                        ${card.price} <span className="discount_price">${card.discount_price}</span>
+                                    </div>
+                                    <div className="stock_count">
+                                        {card.stock_count > "1" ?
+                                        `${card.stock_count} Available in stock`
+                                        : 
+                                        "last product in stock"
+                                    }
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* /////////2/////// */}
+                        {/* <div className="DiscountsList_card">
                         <div className="discount_amount">
                             <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
                                 <div>
@@ -145,9 +165,9 @@ return (
                                 32 available in stock
                             </div>
                         </div>
-                    </div>
-                    {/* //////////3///////// */}
-                    <div className="DiscountsList_card">
+                    </div> */}
+                        {/* //////////3///////// */}
+                        {/* <div className="DiscountsList_card">
                         <div className="discount_amount">
                             <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
                                 <div>
@@ -180,9 +200,9 @@ return (
                                 32 available in stock
                             </div>
                         </div>
-                    </div>
-                    {/* //////////4//////////// */}
-                    <div className="DiscountsList_card">
+                    </div> */}
+                        {/* //////////4//////////// */}
+                        {/* <div className="DiscountsList_card">
                         <div className="discount_amount">
                             <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
                                 <div>
@@ -215,9 +235,9 @@ return (
                                 32 available in stock
                             </div>
                         </div>
-                    </div>
-                    {/* ///////////5/////// */}
-                    <div className="DiscountsList_card">
+                    </div> */}
+                        {/* ///////////5/////// */}
+                        {/* <div className="DiscountsList_card">
                         <div className="discount_amount">
                             <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
                                 <div>
@@ -250,10 +270,10 @@ return (
                                 32 available in stock
                             </div>
                         </div>
-                    </div>
-                </Slider>
+                    </div> */}
+                    </Slider>
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
 };

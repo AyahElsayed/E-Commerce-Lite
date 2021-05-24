@@ -5,6 +5,7 @@ import { heroView } from "./services/heroView";
 import { HeroView } from './components/HeroView';
 import { CategoryList } from "./components/CategoryList";
 import { categoryList } from './services/categoryList';
+import { discountsList } from './services/discountsList';
 import { css } from '@emotion/core';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { DiscountsList } from "./components/DiscountsList";
@@ -12,6 +13,7 @@ import { DiscountsList } from "./components/DiscountsList";
 export const Home = () => {
     const [heroViewData, setHeroViewData] = useState({});
     const [categoryListData, setCategoryListData] = useState([]);
+    const [discountListData, setDiscountListData] = useState([]);
     const [categoryListDataLoading, setCategoryListDataLoading] = useState(true);
 
     const override = css`
@@ -35,6 +37,13 @@ export const Home = () => {
         }).catch((error) => {
             console.log('categoryList error', error);
         });
+
+        discountsList().then(discountListData => {
+            console.log('discountListData', discountListData.data);
+            setDiscountListData(discountListData.data)
+        }).catch((error) => {
+            console.log('discountList error', error);
+        });
     }, []);
 
     return <div className="">
@@ -45,12 +54,11 @@ export const Home = () => {
                 {/* loading.... */}
                 <ClipLoader  loading={categoryListDataLoading} css={override} size={70} />
             </div>
-
             :
             categoryListData.length > 0 && <CategoryList categoryListData={categoryListData} />
         }
 
-        <DiscountsList />
+        <DiscountsList discountListData={discountListData} />
     </div>;
 };
 
