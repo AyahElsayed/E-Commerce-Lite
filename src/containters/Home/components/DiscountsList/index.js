@@ -8,6 +8,8 @@ import { TiFlash } from 'react-icons/ti';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
+import Rate from 'rc-rate';
+import 'rc-rate/assets/index.css';
 
 export const DiscountsList = (props) => {
 
@@ -107,7 +109,12 @@ export const DiscountsList = (props) => {
                                         {card.title}
                                     </div>
                                     <div className="rate">
-                                        *****
+                                        {/* ***** */}
+                                        <Rate 
+                                        value={4}
+                                        allowHalf="true"
+                                        disabled="true"
+                                        />
                                 <span className="rate_count">{card.rate_count}</span>
                                     </div>
                                     <div className="price">
@@ -120,7 +127,7 @@ export const DiscountsList = (props) => {
                                                     <Line
                                                         percent={card.stock_count > 20 ? "80" : "40"}
                                                         strokeWidth="10"
-                                                        strokeColor={card.stock_count > 9 ? "#088a3c": "#ffbc00"}
+                                                        strokeColor={card.stock_count > 9 ? "#088a3c" : "#ffbc00"}
                                                         trailWidth="9"
                                                     />
                                                 </div>
