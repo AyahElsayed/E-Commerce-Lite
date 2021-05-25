@@ -5,8 +5,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { IoIosArrowForward, IoIosArrowBack, IoMdAperture } from 'react-icons/io';
 import { TiFlash } from 'react-icons/ti';
-import { IconContext } from "react-icons";
+import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
+import { Line } from 'rc-progress';
 
 export const DiscountsList = (props) => {
 
@@ -114,163 +115,35 @@ export const DiscountsList = (props) => {
                                     </div>
                                     <div className="stock_count">
                                         {card.stock_count > "1" ?
-                                        `${card.stock_count} Available in stock`
-                                        : 
-                                        "last product in stock"
-                                    }
-                                        
+                                            <div className={`progress_bar ${card.stock_count > 9 ? "greenstock" : "orangeStock"}`}>
+                                                <div className="bar">
+                                                    <Line
+                                                        percent={card.stock_count > 20 ? "80" : "40"}
+                                                        strokeWidth="10"
+                                                        strokeColor={card.stock_count > 9 ? "#088a3c": "#ffbc00"}
+                                                        trailWidth="9"
+                                                    />
+                                                </div>
+                                                <div className="bar_desc">{card.stock_count} Available in stock</div>
+                                            </div>
+                                            :
+                                            <div className="progress_bar" style={{ color: "hotpink" }}>
+                                                <div className="bar">
+                                                    <Line
+                                                        percent="10"
+                                                        strokeWidth="10"
+                                                        strokeColor="hotpink"
+                                                        trailWidth="9"
+                                                    />
+                                                </div>
+                                                <div className="bar_desc">last product in stock</div>
+                                            </div>
+                                        }
+
                                     </div>
                                 </div>
                             </div>
                         )}
-
-                        {/* /////////2/////// */}
-                        {/* <div className="DiscountsList_card">
-                        <div className="discount_amount">
-                            <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <IoMdAperture />
-                                </div>
-                            </IconContext.Provider>
-                                save $100
-                        </div>
-                        <div className="DiscountsList_card_content">
-                            <div className="flash_deal_wrapper">
-                                <div className="flash_deal">
-                                <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <TiFlash />
-                                </div>
-                            </IconContext.Provider>
-                                    FLASH DEAL
-                                    </div>  
-                            </div>
-                            <div className="image">
-                                <img src="./assets/beoplay.jpg" alt="" />
-                            </div>
-                            <div className="brand">
-                                ASUS
-                            </div>
-                            <div className="body_title">
-                                ASUS ZenBook pro duo UX581GV
-                            </div>
-                            <div className="rate">
-                                *****
-                                <span className="rate_count">4.5(20)</span>
-                            </div>
-                            <div className="price">
-                                $2,899,99 <span className="discount_price">$3,000,00</span>
-                            </div>
-                            <div className="stock_count">
-                                32 available in stock
-                            </div>
-                        </div>
-                    </div> */}
-                        {/* //////////3///////// */}
-                        {/* <div className="DiscountsList_card">
-                        <div className="discount_amount">
-                            <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <IoMdAperture />
-                                </div>
-                            </IconContext.Provider>
-                                save $100
-                        </div>
-                        <div className="DiscountsList_card_content">
-                            <div className="flash_deal">
-
-                            </div>
-                            <div className="image">
-                                <img src="./assets/watch.jpg" alt="" />
-                            </div>
-                            <div className="brand">
-                                ASUS
-                            </div>
-                            <div className="body_title">
-                                ASUS ZenBook pro duo UX581GV
-                            </div>
-                            <div className="rate">
-                                *****
-                                <span className="rate_count">4.5(20)</span>
-                            </div>
-                            <div className="price">
-                                $2,899,99 <span className="discount_price">$3,000,00</span>
-                            </div>
-                            <div className="stock_count">
-                                32 available in stock
-                            </div>
-                        </div>
-                    </div> */}
-                        {/* //////////4//////////// */}
-                        {/* <div className="DiscountsList_card">
-                        <div className="discount_amount">
-                            <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <IoMdAperture />
-                                </div>
-                            </IconContext.Provider>
-                                save $100
-                        </div>
-                        <div className="DiscountsList_card_content">
-                            <div className="flash_deal">
-
-                            </div>
-                            <div className="image">
-                                <img src="./assets/playstation.jpg" alt="" />
-                            </div>
-                            <div className="brand">
-                                ASUS
-                            </div>
-                            <div className="body_title">
-                                ASUS ZenBook pro duo UX581GV
-                            </div>
-                            <div className="rate">
-                                *****
-                                <span className="rate_count">4.5(20)</span>
-                            </div>
-                            <div className="price">
-                                $2,899,99 <span className="discount_price">$3,000,00</span>
-                            </div>
-                            <div className="stock_count">
-                                32 available in stock
-                            </div>
-                        </div>
-                    </div> */}
-                        {/* ///////////5/////// */}
-                        {/* <div className="DiscountsList_card">
-                        <div className="discount_amount">
-                            <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
-                                <div>
-                                    <IoMdAperture />
-                                </div>
-                            </IconContext.Provider>
-                                save $100
-                        </div>
-                        <div className="DiscountsList_card_content">
-                            <div className="flash_deal">
-
-                            </div>
-                            <div className="image">
-                                <img src="./assets/playstation.jpg" alt="" />
-                            </div>
-                            <div className="brand">
-                                ASUS
-                            </div>
-                            <div className="body_title">
-                                ASUS ZenBook pro duo UX581GV
-                            </div>
-                            <div className="rate">
-                                *****
-                                <span className="rate_count">4.5(20)</span>
-                            </div>
-                            <div className="price">
-                                $2,899,99 <span className="discount_price">$3,000,00</span>
-                            </div>
-                            <div className="stock_count">
-                                32 available in stock
-                            </div>
-                        </div>
-                    </div> */}
                     </Slider>
                 </div>
             </div>
