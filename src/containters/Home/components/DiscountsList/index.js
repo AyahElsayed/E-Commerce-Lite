@@ -59,9 +59,9 @@ export const DiscountsList = (props) => {
 
 
     return (
-        <div className="DiscountsList">
+        <div className="dscounts_list">
             <div className="content-container slider_container ">
-                <div className="DiscountsList_header">
+                <div className="discounts_list_header">
                     <h3 className="header_title">
                         Recent Discounts
                     </h3>
@@ -73,10 +73,10 @@ export const DiscountsList = (props) => {
                     </div>
                 </div>
 
-                <div className="DiscountsList_body slider_container">
+                <div className="discounts_list_body slider_container">
                     <Slider {...settings}>
                         {discountListData.map((card) =>
-                            <div className="DiscountsList_card">
+                            <div className="discounts_list_card">
                                 <div className="discount_amount">
                                     <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
                                         <div>
@@ -85,7 +85,7 @@ export const DiscountsList = (props) => {
                                     </IconContext.Provider>
                                     save ${card.discount_amount}
                                 </div>
-                                <div className="DiscountsList_card_content">
+                                <div className="discounts_list_card_content">
                                     {card.flash_deal === "true" ?
                                         <div className="flash_deal_wrapper">
                                             <div className="flash_deal">
@@ -99,25 +99,26 @@ export const DiscountsList = (props) => {
                                         </div>
                                         : ""
                                     }
-                                    <div className="image">
+                                    <div className="discount_product_image">
                                         <img src={card.image} alt="" />
                                     </div>
-                                    <div className="brand">
+                                    <div className="discount_product_brand">
                                         {card.brand}
                                     </div>
                                     <div className="body_title">
                                         {card.title}
                                     </div>
-                                    <div className="rate">
+                                    <div className="discount_product_rate">
                                         {/* ***** */}
                                         <Rate 
                                         value={4}
                                         allowHalf="true"
                                         disabled="true"
                                         />
+                                <span className="rate_count rate_percentage">{card.rate}</span> 
                                 <span className="rate_count">{card.rate_count}</span>
                                     </div>
-                                    <div className="price">
+                                    <div className="discount_product_price">
                                         ${card.price} <span className="discount_price">${card.discount_price}</span>
                                     </div>
                                     <div className="stock_count">

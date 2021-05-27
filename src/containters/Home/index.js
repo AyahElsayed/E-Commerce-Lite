@@ -15,6 +15,7 @@ export const Home = () => {
     const [categoryListData, setCategoryListData] = useState([]);
     const [discountListData, setDiscountListData] = useState([]);
     const [categoryListDataLoading, setCategoryListDataLoading] = useState(true);
+    const [discountsListDataLoading, setDiscountsListDataLoading] = useState(true);
 
     const override = css`
         display: block;
@@ -39,8 +40,9 @@ export const Home = () => {
         });
 
         discountsList().then(discountListData => {
-            console.log('discountListData', discountListData.data);
+            // console.log('discountListData', discountListData.data);
             setDiscountListData(discountListData.data)
+            setDiscountsListDataLoading(false)
         }).catch((error) => {
             console.log('discountList error', error);
         });
@@ -52,13 +54,21 @@ export const Home = () => {
             ?
             <div className="content-container">
                 {/* loading.... */}
-                <ClipLoader  loading={categoryListDataLoading} css={override} size={70} />
+                <ClipLoader loading={categoryListDataLoading} css={override} size={70} />
             </div>
             :
             categoryListData.length > 0 && <CategoryList categoryListData={categoryListData} />
         }
 
-        <DiscountsList discountListData={discountListData} />
+        {discountsListDataLoading
+            ?
+            <div className="content-container">
+                {/* loading.... */}
+                <ClipLoader loading={discountsListDataLoading} css={override} size={70} />
+            </div>
+            :
+            discountListData.length > 0 && <DiscountsList discountListData={discountListData} />
+        }
     </div>;
 };
 
