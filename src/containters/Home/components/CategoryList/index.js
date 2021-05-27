@@ -5,32 +5,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import { NextArrow, PrevArrow } from '../../../../components/helpers/ArrowsSlider';
 
 export const CategoryList = (props) => {
-
-    function NextArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className="next_arrow"
-                onClick={onClick}
-            >
-                <IoIosArrowForward />
-            </div>
-        );
-    }
-
-    function PrevArrow(props) {
-        const { onClick } = props;
-        return (
-            <div
-                className="prev_arrow"
-                onClick={onClick}
-            >
-                <IoIosArrowBack/>
-            </div>
-        );
-    }
 
     const { categoryListData } = props;
     const settings = {

@@ -3,38 +3,16 @@ import './index.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { IoIosArrowForward, IoIosArrowBack, IoMdAperture } from 'react-icons/io';
+import { IoMdAperture } from 'react-icons/io';
 import { TiFlash } from 'react-icons/ti';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
+import { NextArrow, PrevArrow } from '../../../../components/helpers/ArrowsSlider';
 
 export const DiscountsList = (props) => {
-
-    function NextArrow(props) {
-        const { onClick } = props;
-        return (
-            <div className="next_arrow"
-                onClick={onClick}
-            >
-                <IoIosArrowForward />
-            </div>
-        );
-    }
-
-    function PrevArrow(props) {
-        const { onClick } = props;
-        return (
-            <div
-                className="prev_arrow"
-                onClick={onClick}
-            >
-                <IoIosArrowBack />
-            </div>
-        );
-    }
 
     const settings = {
         dots: true,
@@ -56,7 +34,6 @@ export const DiscountsList = (props) => {
     };
 
     const { discountListData } = props;
-
 
     return (
         <div className="dscounts_list">
@@ -110,13 +87,13 @@ export const DiscountsList = (props) => {
                                     </div>
                                     <div className="discount_product_rate">
                                         {/* ***** */}
-                                        <Rate 
-                                        value={4}
-                                        allowHalf="true"
-                                        disabled="true"
+                                        <Rate
+                                            value={4}
+                                            allowHalf="true"
+                                            disabled="true"
                                         />
-                                <span className="rate_count rate_percentage">{card.rate}</span> 
-                                <span className="rate_count">{card.rate_count}</span>
+                                        <span className="rate_count rate_percentage">{card.rate}</span>
+                                        <span className="rate_count">{card.rate_count}</span>
                                     </div>
                                     <div className="discount_product_price">
                                         ${card.price} <span className="discount_price">${card.discount_price}</span>
