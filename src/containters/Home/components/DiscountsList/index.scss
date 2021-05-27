@@ -36,6 +36,11 @@
             margin-bottom: 12px;
             padding: 0 4%;
             min-height: 320px;
+            @media (min-width:2280px) {
+                width: 72% !important;
+                padding: 0 6%;
+                min-height: 379px;
+            }
             .discounts_list_card_content{
                 display: flex;
                 flex-direction: column;
@@ -72,13 +77,18 @@
                     color: #b5aeae;
                     font-weight: 500; 
                     text-transform: uppercase; 
+                    @media (min-width:2280px) {
+                        font-size: 14px;
+                    }
                 }
                 .body_title{
-                    font-size: 12px;
+                    font-size: 13px;
                     color: #170854;
                     font-weight: 500;
-                    // flex: 1;
                     text-transform: capitalize;
+                    @media (min-width:2280px) {
+                        font-size: 15px;
+                    }
                 }
                 .discount_product_rate{
                     // flex:1;
@@ -101,6 +111,9 @@
                     flex: 3;
                     color:#060661;
                     font-weight: bolder;
+                    @media (min-width:2280px) {
+                        font-size: 19px;
+                    }
                     .discount_price{
                         flex: 1;
                         font-size: 12px;
@@ -115,6 +128,9 @@
                     flex: 2;
                     display: flex;
                     align-items: center;
+                    @media (min-width:2280px) {
+                        font-size: 15px;
+                    }
                     .progress_bar{
                         display: flex;
                         flex: 1;
