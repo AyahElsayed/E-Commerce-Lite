@@ -11,6 +11,7 @@ import { Line } from 'rc-progress';
 import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
 import { NextArrow, PrevArrow } from '../../../../components/helpers/ArrowsSlider';
+import { PropTypes } from 'prop-types';
 
 export const DiscountsList = (props) => {
 
@@ -86,7 +87,6 @@ export const DiscountsList = (props) => {
                                         {card.title}
                                     </div>
                                     <div className="discount_product_rate">
-                                        {/* ***** */}
                                         <Rate
                                             value={4}
                                             allowHalf="true"
@@ -124,7 +124,6 @@ export const DiscountsList = (props) => {
                                                 <div className="bar_desc">last product in stock</div>
                                             </div>
                                         }
-
                                     </div>
                                 </div>
                             </div>
@@ -134,4 +133,20 @@ export const DiscountsList = (props) => {
             </div>
         </div>
     )
+};
+
+DiscountsList.propTypes = {
+    discountListData: PropTypes.shape({
+        id: PropTypes.number,
+        discount_amount: PropTypes.number,
+        flash_deal: PropTypes.bool,
+        image: PropTypes.string,
+        brand: PropTypes.string,
+        title: PropTypes.string,
+        rate: PropTypes.number,
+        rate_count: PropTypes.number,
+        price: PropTypes.number,
+        discount_price: PropTypes.number,
+        stock_count: PropTypes.number,
+    })
 };

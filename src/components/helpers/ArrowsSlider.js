@@ -13,7 +13,7 @@ export const NextArrow = (props) => {
         </div>
     );
 
-}
+};
 
 export const PrevArrow = (props) => {
     const { onClick } = props;
@@ -25,7 +25,7 @@ export const PrevArrow = (props) => {
             <IoIosArrowBack />
         </div>
     );
-}
+};
 
 
 
