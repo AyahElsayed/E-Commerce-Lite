@@ -1,0 +1,178 @@
+.dscounts_list{
+    display: flex;
+    height: 80vh;
+    // height: 500px;
+    .slider_container{
+        display:block;
+    }
+    .discounts_list_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header_title{
+            font-size: 29px;
+            color: #1c0671
+            }
+        .all_products{
+            font-size: 10px;
+            font-weight: 700;
+            a{
+                text-decoration: none;
+                color: #1c0671
+            }
+        }
+    }
+    .discounts_list_body{
+        // display:flex;
+        justify-content: space-between;
+        min-height: 80vh;
+        .discounts_list_card{
+            display: flex !important;
+            flex-direction: column;
+            box-shadow: 6px 4px 11px 0px #d2c9c975;
+            border-radius: 8px;
+            width: 78% !important;
+            margin: auto;
+            margin-bottom: 12px;
+            padding: 0 4%;
+            min-height: 320px;
+            @media (min-width:2280px) {
+                width: 72% !important;
+                padding: 0 6%;
+                min-height: 379px;
+            }
+            .discounts_list_card_content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 261px;
+                flex: 1;
+                .flash_deal_wrapper{
+                    position: absolute;
+                    top: 32px;
+                    background-color: #ED67A7;
+                    border-radius: 8px;
+                    padding: 5px;
+                    .flash_deal{
+                        color: #fff;
+                        font-size: 11px;
+                        font-weight: 500;
+                        display:flex;
+                    }
+                }
+                .discount_product_image{
+                    flex: 5;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    img{
+                        max-width: 100%;
+                    }
+                }
+                .discount_product_brand{
+                    align-items: flex-end;
+                    display: flex;
+                    flex:3;
+                    font-size: 12px;
+                    color: #b5aeae;
+                    font-weight: 500; 
+                    text-transform: uppercase; 
+                    @media (min-width:2280px) {
+                        font-size: 14px;
+                    }
+                }
+                .body_title{
+                    font-size: 13px;
+                    color: #170854;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    @media (min-width:2280px) {
+                        font-size: 15px;
+                    }
+                }
+                .discount_product_rate{
+                    // flex:1;
+                    display: flex;
+                    align-items: center;
+                    .rate_count{
+                        font-size: 12px;
+                    } 
+                    .rate_percentage{
+                        font-weight: bolder;
+                        color: #060661;
+                        margin-right: 3px;
+                    }   
+                }
+                .discount_product_price{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: 17px;
+                    flex: 3;
+                    color:#060661;
+                    font-weight: bolder;
+                    @media (min-width:2280px) {
+                        font-size: 19px;
+                    }
+                    .discount_price{
+                        flex: 1;
+                        font-size: 12px;
+                        color: #bdb2b2;
+                        text-decoration: line-through;
+                        display: flex;
+                        padding-left: 8%;
+                    }
+                }
+                .stock_count{
+                    font-size: 11px;
+                    flex: 2;
+                    display: flex;
+                    align-items: center;
+                    @media (min-width:2280px) {
+                        font-size: 15px;
+                    }
+                    .progress_bar{
+                        display: flex;
+                        flex: 1;
+                        .bar{
+                            display: inline-block;
+                            flex: 1;
+                            margin-right: 4px;
+                        }
+                        .bar_desc{
+                            display: inline-block;
+                            flex: 6;
+                            font-weight: 500;
+                        }
+                    }
+                    .greenstock{
+                        color: #088a3c;
+                    }
+                    .orangeStock{
+                        color: #ffbc00;
+                    }
+                    
+                    
+                }
+            }
+            .discount_amount{
+                background-color: #6FE09B;
+                display: flex;
+                align-items: center;
+                align-self: flex-start;
+                border-radius: 8px;
+                font-size: 13px;
+                min-height: 28px;
+                padding: 0 5px;
+                color: #fff;
+                .discount_amount_icon{
+                    margin: 5px 5px 0 0px;
+                }
+            }
+            
+        }
+    }
+}
+.slider-container{
+    display:block;
+}

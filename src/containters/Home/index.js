@@ -5,13 +5,17 @@ import { heroView } from "./services/heroView";
 import { HeroView } from './components/HeroView';
 import { CategoryList } from "./components/CategoryList";
 import { categoryList } from './services/categoryList';
+import { discountsList } from './services/discountsList';
 import { css } from '@emotion/core';
 import ClipLoader from 'react-spinners/ClipLoader';
+import { DiscountsList } from "./components/DiscountsList";
 
 export const Home = () => {
     const [heroViewData, setHeroViewData] = useState({});
     const [categoryListData, setCategoryListData] = useState([]);
+    const [discountListData, setDiscountListData] = useState([]);
     const [categoryListDataLoading, setCategoryListDataLoading] = useState(true);
+    const [discountsListDataLoading, setDiscountsListDataLoading] = useState(true);
 
     const override = css`
         display: block;
@@ -34,6 +38,14 @@ export const Home = () => {
         }).catch((error) => {
             console.log('categoryList error', error);
         });
+
+        discountsList().then(discountListData => {
+            // console.log('discountListData', discountListData.data);
+            setDiscountListData(discountListData.data)
+            setDiscountsListDataLoading(false)
+        }).catch((error) => {
+            console.log('discountList error', error);
+        });
     }, []);
 
     return <div className="">
@@ -42,11 +54,20 @@ export const Home = () => {
             ?
             <div className="content-container">
                 {/* loading.... */}
-                <ClipLoader  loading={categoryListDataLoading} css={override} size={70} />
+                <ClipLoader loading={categoryListDataLoading} css={override} size={70} />
             </div>
-
             :
             categoryListData.length > 0 && <CategoryList categoryListData={categoryListData} />
+        }
+
+        {discountsListDataLoading
+            ?
+            <div className="content-container">
+                {/* loading.... */}
+                <ClipLoader loading={discountsListDataLoading} css={override} size={70} />
+            </div>
+            :
+            discountListData.length > 0 && <DiscountsList discountListData={discountListData} />
         }
     </div>;
 };
