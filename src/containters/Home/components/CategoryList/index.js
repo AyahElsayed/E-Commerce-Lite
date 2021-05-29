@@ -1,58 +1,52 @@
 import React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
-import { NextArrow, PrevArrow } from '../../../../components/helpers/ArrowsSlider';
+import { Slider } from '../../../../components/Slider';
 
 export const CategoryList = (props) => {
 
     const { categoryListData } = props;
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
-    };
+
+    const renderItem = (item,index )=> {
+        return (
+            <div
+                className={`home_category_card  ${(index - 1) % 3 === 0 ? 'home_category_mid_card' : ''}`}
+                key={item.id}>
+                <div className="home_category_content">
+                    <h3 className="home_category_title">
+                        {item.title}
+                    </h3>
+                    <p className="home_category_desc">
+                        {item.description}
+                    </p>
+                    <div className="home_category_mainBtn">
+                        <Link
+                            to={item.action_link} >
+                            Shop Now
+                        </Link>
+                    </div>
+                </div>
+                <div className="home_category_img">
+                    <img
+                        src={item.image}
+                        alt={item.alt_value}
+                    />
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>
             <div className="CategoryList">
                 <div className="content-container slider-container">
                     <div className="">
-                        <Slider {...settings}>
-                            {categoryListData.map((card, index) =>
-                                <div
-                                    className={`home_category_card  ${(index - 1) % 3 === 0 ? 'home_category_mid_card' : ''}`}
-                                    key={card.id}>
-                                    <div className="home_category_content">
-                                        <h3 className="home_category_title">
-                                            {card.title}
-                                        </h3>
-                                        <p className="home_category_desc">
-                                            {card.description}
-                                        </p>
-                                        <div className="home_category_mainBtn">
-                                            <Link
-                                                to={card.action_link} >
-                                                Shop Now
-                                        </Link>
-                                        </div>
-                                    </div>
-                                    <div className="home_category_img">
-                                        <img
-                                            src={card.image}
-                                            alt={card.alt_value}
-                                        />
-                                    </div>
-                                </div>
-                            )}
-                        </Slider>
+                        <Slider
+                            renderItem={renderItem}
+                            // settings={settings} // defautl settings
+                            data={categoryListData}
+                        />
                     </div>
                 </div>
             </div>
