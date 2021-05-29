@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { SliderComponent } from '../Slider';
+import { SliderComponent } from '../../../../components/Slider';
 
 export const CategoryList = (props) => {
 

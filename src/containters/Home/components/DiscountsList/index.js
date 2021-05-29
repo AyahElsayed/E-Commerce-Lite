@@ -8,7 +8,7 @@ import { Line } from 'rc-progress';
 import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
 import { PropTypes } from 'prop-types';
-import { SliderComponent } from '../Slider';
+import { SliderComponent } from '../../../../components/Slider';
 
 export const DiscountsList = (props) => {
 
