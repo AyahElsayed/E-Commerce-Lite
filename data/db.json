@@ -11,9 +11,7 @@
     }
   ],
 
-  "homeCategory": {
-    "component": "categoryList",
-    "children": [
+  "homeCategory":[
       {
         "id": 1,
         "title": "Fashion",
@@ -87,7 +85,7 @@
         "alt_value": "Books"
       }
     ]
-  },
+  ,
 
   "homeDiscounts": [
     {
