@@ -6,26 +6,39 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
 import { NextArrow, PrevArrow } from '../../../../components/helpers/ArrowsSlider';
+import { SliderComponent } from '../Slider';
 
 export const CategoryList = (props) => {
 
     const { categoryListData } = props;
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3,
+    //     nextArrow: <NextArrow />,
+    //     prevArrow: <PrevArrow />
+    // };
     const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
-    };
+    }
 
     return (
         <>
             <div className="CategoryList">
                 <div className="content-container slider-container">
                     <div className="">
-                        <Slider {...settings}>
+
+                        <SliderComponent
+                            noOfShow={3}
+                            noOfScroll={3}
+                            categoryListData={categoryListData}
+                            Arrows ={settings}
+                            />
+
+                        {/* <Slider {...settings} >
                             {categoryListData.map((card, index) =>
                                 <div
                                     className={`home_category_card  ${(index - 1) % 3 === 0 ? 'home_category_mid_card' : ''}`}
@@ -52,7 +65,7 @@ export const CategoryList = (props) => {
                                     </div>
                                 </div>
                             )}
-                        </Slider>
+                        </Slider> */}
                     </div>
                 </div>
             </div>
