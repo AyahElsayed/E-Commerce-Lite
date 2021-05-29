@@ -45,7 +45,7 @@ export const CategoryList = (props) => {
                         <SliderComponent
                             renderItem={renderItem}
                             // settings={settings} // defautl settings
-                            categoryListData={categoryListData}
+                            data={categoryListData}
                         />
                     </div>
                 </div>

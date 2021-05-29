@@ -17,25 +17,18 @@ export const SliderComponent = (props) => {
     };
 
     let finalSettings = { ...defaultSettings };
-    const { categoryListData, settings, renderItem, discountListData } = props;
+    const { settings, renderItem, data } = props;
 
     if (settings !== undefined) {
         finalSettings = { ...finalSettings, ...settings }
-    }
+    };
 
     return (
         <div>
             <Slider {...finalSettings}>
-                {props.categoryListData ?
-                    categoryListData.map((item, index) => {
+                {data ?
+                    data.map((item, index) => {
                         return renderItem(item, index)
-                    })
-                    :
-                    ""
-                }
-                {props.discountListData ?
-                    discountListData.map((item) => {
-                        return renderItem(item)
                     })
                     :
                     ""

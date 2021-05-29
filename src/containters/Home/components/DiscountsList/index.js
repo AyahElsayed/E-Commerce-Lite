@@ -124,7 +124,7 @@ export const DiscountsList = (props) => {
                 <div className="discounts_list_body slider_container">
                     <SliderComponent
                         settings={settings}
-                        discountListData={discountListData}
+                        data={discountListData}
                         renderItem={renderItem}
                     />
                 </div>
