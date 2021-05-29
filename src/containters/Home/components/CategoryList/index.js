@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { SliderComponent } from '../../../../components/Slider';
+import { Slider } from '../../../../components/Slider';
 
 export const CategoryList = (props) => {
 
@@ -42,7 +42,7 @@ export const CategoryList = (props) => {
             <div className="CategoryList">
                 <div className="content-container slider-container">
                     <div className="">
-                        <SliderComponent
+                        <Slider
                             renderItem={renderItem}
                             // settings={settings} // defautl settings
                             data={categoryListData}

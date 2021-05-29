@@ -1,10 +1,10 @@
 import React from 'react';
-import Slider from 'react-slick';
+import ReactSlider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NextArrow, PrevArrow } from './helpers/ArrowsSlider';
 
-export const SliderComponent = (props) => {
+export const Slider = (props) => {
 
     const defaultSettings = {
         dots: true,
@@ -25,7 +25,7 @@ export const SliderComponent = (props) => {
 
     return (
         <div>
-            <Slider {...finalSettings}>
+            <ReactSlider {...finalSettings}>
                 {data ?
                     data.map((item, index) => {
                         return renderItem(item, index)
@@ -33,7 +33,7 @@ export const SliderComponent = (props) => {
                     :
                     ""
                 }
-            </Slider>
+            </ReactSlider>
         </div>
     )
 };

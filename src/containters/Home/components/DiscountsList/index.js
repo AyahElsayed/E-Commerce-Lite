@@ -8,7 +8,7 @@ import { Line } from 'rc-progress';
 import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
 import { PropTypes } from 'prop-types';
-import { SliderComponent } from '../../../../components/Slider';
+import { Slider } from '../../../../components/Slider';
 
 export const DiscountsList = (props) => {
 
@@ -122,7 +122,7 @@ export const DiscountsList = (props) => {
                     </div>
                 </div>
                 <div className="discounts_list_body slider_container">
-                    <SliderComponent
+                    <Slider
                         settings={settings}
                         data={discountListData}
                         renderItem={renderItem}
