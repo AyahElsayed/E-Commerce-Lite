@@ -296,5 +296,25 @@
       "discount_price": "59.99",
       "stock_count": "10"
     }
+  ],
+  "homePromotions":[
+    {
+      "id":1,
+      "name":"sweater",
+      "image":"./assets/sweater.JPG",
+      "desc":"Up to 25% off on all casual sweaters"
+    },
+    {
+      "id":2,
+      "name":"beauty",
+      "image":"./assets/beautyProduct.JPG",
+      "desc":"up to 20% off on beauty products"
+    },
+    {
+      "id":3,
+      "name":"bike",
+      "image":"./assets/bike.JPG",
+      "desc":"Exciting bike rides with amazing equipment"
+    }
   ]
 }
