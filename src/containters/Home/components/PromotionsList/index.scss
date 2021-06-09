@@ -1,7 +1,9 @@
 .promotions-List{
-    flex: 1;
-    height: 100vh;
-    // height: 600px;
+    display: flex;
+    height: 65vh;
+    .container{
+        display: block;
+    }
     .promotions-list-header{
         display: flex;
         flex: 1;

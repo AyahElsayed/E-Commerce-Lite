@@ -87,7 +87,7 @@ export const Home = () => {
                 <ClipLoader loading={promotionsListDataLoading} css={override} size={70} />
             </div>
             :
-            <div className="content-container">
+            <div className="">
                 {promotionsListData.length > 0 && <PromotionsList promotionsListData={promotionsListData} />}
             </div>
 

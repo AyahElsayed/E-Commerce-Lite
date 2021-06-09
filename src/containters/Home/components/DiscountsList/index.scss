@@ -1,7 +1,6 @@
 .dscounts_list{
-    display: flex;
-    height: 80vh;
-    // height: 500px;
+    height: 68vh;
+    overflow: hidden;
     .slider_container{
         display:block;
     }
@@ -23,9 +22,7 @@
         }
     }
     .discounts_list_body{
-        // display:flex;
         justify-content: space-between;
-        min-height: 80vh;
         .discounts_list_card{
             display: flex !important;
             flex-direction: column;
@@ -35,7 +32,7 @@
             margin: auto;
             margin-bottom: 12px;
             padding: 0 4%;
-            min-height: 320px;
+            height: 45vh;
             @media (min-width:2280px) {
                 width: 72% !important;
                 padding: 0 6%;
@@ -91,7 +88,6 @@
                     }
                 }
                 .discount_product_rate{
-                    // flex:1;
                     display: flex;
                     align-items: center;
                     .rate_count{
