@@ -1,116 +1,144 @@
-.dscounts_list{
+.dscounts_list {
     height: 68vh;
     overflow: hidden;
-    .slider_container{
-        display:block;
+
+    .slider_container {
+        display: block;
     }
-    .discounts_list_header{
+
+    .discounts_list_header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .header_title{
+
+        .header_title {
             font-size: 29px;
             color: #1c0671
-            }
-        .all_products{
+        }
+
+        .all_products {
             font-size: .8rem;
             font-weight: 700;
-            a{
+
+            a {
                 text-decoration: none;
                 color: #1c0671
             }
         }
     }
-    .discounts_list_body{
+
+    .discounts_list_body {
         justify-content: space-between;
-        .discounts_list_card{
+
+        .discounts_list_card {
             display: flex !important;
             flex-direction: column;
             box-shadow: 6px 4px 11px 0px #d2c9c975;
             border-radius: 8px;
-            width: 78% !important;
+            width: 12vw !important;
             margin: auto;
             margin-bottom: 12px;
             padding: 0 4%;
             height: 45vh;
+
             @media (min-width:2280px) {
                 width: 72% !important;
                 padding: 0 6%;
                 min-height: 379px;
             }
-            .discounts_list_card_content{
+
+            .discounts_list_card_content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 min-height: 261px;
                 flex: 1;
-                .flash_deal_wrapper{
+
+                .flash_deal_wrapper {
                     position: absolute;
                     top: 32px;
                     background-color: #ED67A7;
                     border-radius: 8px;
                     padding: 5px;
-                    .flash_deal{
+
+                    .flash_deal {
                         color: #fff;
                         font-size: 11px;
                         font-weight: 500;
-                        display:flex;
+                        display: flex;
                     }
                 }
-                .discount_product_image{
+
+                .discount_product_image {
                     flex: 5;
                     justify-content: center;
                     align-items: center;
                     display: flex;
-                    img{
+
+                    img {
                         max-width: 100%;
                     }
                 }
-                .discount_product_brand{
+
+                .discount_product_brand {
                     align-items: flex-end;
                     display: flex;
-                    flex:3;
+                    flex: 1;
                     font-size: 12px;
                     color: #b5aeae;
-                    font-weight: 500; 
-                    text-transform: uppercase; 
+                    font-weight: 500;
+                    text-transform: uppercase;
+
                     @media (min-width:2280px) {
                         font-size: 14px;
                     }
                 }
-                .body_title{
+
+                .body_title {
                     font-size: 13px;
-                    color: #170854;
-                    font-weight: 500;
+                    color: #230b83;
+                    font-weight: 600;
                     text-transform: capitalize;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    max-width: 84%;
+
+
                     @media (min-width:2280px) {
                         font-size: 15px;
                     }
                 }
-                .discount_product_rate{
+
+                .discount_product_rate {
                     display: flex;
                     align-items: center;
-                    .rate_count{
+                    flex: 1;
+
+                    .rate_count {
                         font-size: 12px;
-                    } 
-                    .rate_percentage{
+                    }
+
+                    .rate_percentage {
                         font-weight: bolder;
                         color: #060661;
                         margin-right: 3px;
-                    }   
+                    }
                 }
-                .discount_product_price{
+
+                .discount_product_price {
                     display: flex;
                     align-items: center;
-                    font-weight: 600;
                     font-size: 17px;
-                    flex: 3;
-                    color:#060661;
+                    flex: 1;
+                    color: #0b0b90;;
                     font-weight: bolder;
+
                     @media (min-width:2280px) {
                         font-size: 19px;
                     }
-                    .discount_price{
+
+                    .discount_price {
                         flex: 1;
                         font-size: 12px;
                         color: #bdb2b2;
@@ -119,39 +147,47 @@
                         padding-left: 8%;
                     }
                 }
-                .stock_count{
+
+                .stock_count {
                     font-size: 11px;
-                    flex: 2;
+                    flex: 1;
                     display: flex;
                     align-items: center;
+
                     @media (min-width:2280px) {
                         font-size: 15px;
                     }
-                    .progress_bar{
+
+                    .progress_bar {
                         display: flex;
                         flex: 1;
-                        .bar{
+
+                        .bar {
                             display: inline-block;
                             flex: 1;
                             margin-right: 4px;
                         }
-                        .bar_desc{
+
+                        .bar_desc {
                             display: inline-block;
                             flex: 6;
                             font-weight: 500;
                         }
                     }
-                    .greenstock{
+
+                    .greenstock {
                         color: #088a3c;
                     }
-                    .orangeStock{
+
+                    .orangeStock {
                         color: #ffbc00;
                     }
-                    
-                    
+
+
                 }
             }
-            .discount_amount{
+
+            .discount_amount {
                 background-color: #6FE09B;
                 display: flex;
                 align-items: center;
@@ -161,14 +197,16 @@
                 min-height: 28px;
                 padding: 0 5px;
                 color: #fff;
-                .discount_amount_icon{
+
+                .discount_amount_icon {
                     margin: 5px 5px 0 0px;
                 }
             }
-            
+
         }
     }
 }
-.slider-container{
-    display:block;
+
+.slider-container {
+    display: block;
 }
