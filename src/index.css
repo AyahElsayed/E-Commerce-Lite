@@ -19,7 +19,7 @@ code {
   width: 100%;
 }
 .content-container{
-  width:65%;
+  width:65vw;
   margin:auto;
   display:flex;
   align-items: center;
