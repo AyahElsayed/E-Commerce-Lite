@@ -50,6 +50,9 @@
                 align-items: flex-end;
                 font-weight: 700;
                 font-size: 1.5rem;
+                @media (min-width:2280px) {
+                    font-size: 2rem;
+                }
             }
 
             .home_category_desc {
@@ -58,6 +61,9 @@
                 flex: 1;
                 display: flex;
                 align-items: center;
+                @media (min-width:2280px) {
+                    font-size: 1.2rem;
+                }
             }
 
             .home_category_mainBtn {
@@ -75,12 +81,19 @@
                     justify-content: center;
                     align-items: center;
                     flex: .5;
+                    @media (min-width:2280px) {
+                        flex: .7;
+                        height: 50px;
+                    }
 
                     a {
                         text-decoration: none;
                         color: #000;
-                        font-size: 13px;
+                        font-size: .8rem;
                         font-weight: 600;
+                        @media (min-width:2280px) {
+                            font-size: 1.3rem;
+                        }
                     }
                 }
             }
