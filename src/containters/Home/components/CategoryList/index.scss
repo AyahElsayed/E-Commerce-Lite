@@ -1,6 +1,9 @@
 .CategoryList {
     display: flex;
     height: 55vh;
+    @media (min-width:2280px) {
+        height: 40vh;
+    }
 
     .home_category_mid_card {
         margin: 0 5% !important;

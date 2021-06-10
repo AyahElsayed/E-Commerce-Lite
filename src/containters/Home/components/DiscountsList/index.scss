@@ -1,6 +1,9 @@
 .dscounts_list {
     height: 68vh;
     overflow: hidden;
+    @media (min-width:2280px) {
+        height: 44vh;
+    }
 
     .slider_container {
         display: block;
@@ -36,15 +39,15 @@
             box-shadow: 6px 4px 11px 0px #d2c9c975;
             border-radius: 8px;
             width: 12vw !important;
-            margin: auto;
+            // margin: auto;
             margin-bottom: 12px;
-            padding: 0 4%;
+            padding: 0 12%;
             height: 45vh;
 
             @media (min-width:2280px) {
                 width: 72% !important;
-                padding: 0 6%;
-                min-height: 379px;
+                padding: 0 13%;
+                max-height: 32vh;
             }
 
             .discounts_list_card_content {
@@ -52,18 +55,21 @@
                 flex-direction: column;
                 justify-content: center;
                 min-height: 261px;
-                flex: 1;
+                flex: 11;
 
                 .flash_deal_wrapper {
                     position: absolute;
-                    top: 32px;
+                    top: 34px;
                     background-color: #ED67A7;
                     border-radius: 8px;
                     padding: 5px;
+                    @media (min-width:2280px) {
+                        top: 40px;
+                    }
 
                     .flash_deal {
                         color: #fff;
-                        font-size: 11px;
+                        font-size: .9rem;
                         font-weight: 500;
                         display: flex;
                     }
@@ -193,10 +199,14 @@
                 align-items: center;
                 align-self: flex-start;
                 border-radius: 8px;
-                font-size: 13px;
-                min-height: 28px;
+                font-size: 1rem;
+                // min-height: 28px;
                 padding: 0 5px;
                 color: #fff;
+                flex: 1;
+                @media (min-width:2280px) {
+                    flex: .8;
+                }
 
                 .discount_amount_icon {
                     margin: 5px 5px 0 0px;

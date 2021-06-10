@@ -1,83 +1,111 @@
-.HeroView{
+.HeroView {
     height: 90vh;
     background-color: #321F96;
-    .container{
+
+    @media (min-width:2280px) {
+        height: 60vh;
+    }
+
+    .container {
         padding-top: 5%;
     }
-    .content-container{
-        .content{
+
+    .content-container {
+        .content {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-        }
-        .hint{
-            color:#d28f84;
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-        .title{
-            color:#fff;
-            font-size: 57px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .desc{
-            color:#fff;
-            opacity: 0.9;
-            font-weight: 100;
-            margin-bottom: 10%; // TODO fix
-            padding-right: 35%; // TODO fix
-        }
-        .mainBtn{
-            color: #262929;
-            font-size: 15px;
-            font-weight: 600;
-            height: 46px;
-            background: linear-gradient(90deg, rgba(240,126,108,1) 29%, rgba(228,89,58,0.9668067055923932) 100%); 
-            border-radius: 7px;
-            border-style: none;
-            margin-bottom: 10%; // TODO fix
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            padding: 0 1%;
-            &:hover{
-                opacity:.8;
+            align-self: stretch;
+            @media (min-width:2280px) {
+                height: 32vh;
+                justify-content: center;
             }
-        }
-        .assistant{
-            border-left: 1px solid #e7e7dc38;
-            height: 75px;
-            display: flex;
-            flex: 1;
-            padding-left: 5%; // TODO fix
-            margin-top: 10%; // TODO fix
-            .content-assistant{
-                display: flex;
-                align-items: center;
+
+            .hint {
+                color: #d28f84;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 700;
+                display: flex
             }
-            img{
-                width: 43px;
-                border: 2px solid #bbb2b2;
-                border-radius: 50%;
-            }
-            span{
-                font-size: 14px;
-                padding-left: 9px;
+
+            .title {
                 color: #fff;
-                opacity: .9;
-                font-weight: 400;
+                font-size: 57px;
+                margin-top: 0;
+                margin-bottom: 0;
+                @media (min-width:2280px) {
+                   width: 80%;
+                   margin-bottom: 0.67em;
+                }
             }
-            .icon{
+
+            .desc {
+                color: #fff;
+                opacity: 0.9;
+                font-weight: 100;
+                width: 64%
+            }
+
+            .heroView_mainBtn {
                 display: flex;
+                flex: .6;
+                align-items: center;
+                align-self: stretch;
+
+                .mainBtn {
+                    color: #262929;
+                    font-size: 15px;
+                    font-weight: 600;
+                    height: 46px;
+                    background: linear-gradient(90deg, rgba(240, 126, 108, 1) 29%, rgba(228, 89, 58, 0.9668067055923932) 100%);
+                    border-radius: 7px;
+                    border-style: none;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+            .assistant {
+                border-left: 1px solid #e7e7dc38;
+                height: 75px;
+                display: flex;
+                
+                .content-assistant {
+                    display: flex;
+                    align-items: center;
+                }
+
+                img {
+                    width: 43px;
+                    border: 2px solid #bbb2b2;
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: 14px;
+                    padding-left: 9px;
+                    color: #fff;
+                    opacity: .9;
+                    font-weight: 400;
+                }
+
+                .icon {
+                    display: flex;
+                }
             }
         }
-        .mainImg{
+
+        .mainImg {
             flex: 1;
-            img{
+
+            img {
                 width: 100%;
             }
         }

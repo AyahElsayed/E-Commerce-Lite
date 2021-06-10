@@ -102,7 +102,7 @@ export const Header = () => {
                             </button>
                             {isLanguageMenuShown &&
                                 <div className="menu">
-                                    <button className="btn_menu">Eng</button>
+                                    <button className="btn_menu">En</button>
                                     <button className="btn_menu">Ar</button>
                                 </div>
                             }

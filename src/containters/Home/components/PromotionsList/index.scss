@@ -1,6 +1,9 @@
 .promotions-List{
     display: flex;
     height: 65vh;
+    @media (min-width:2280px) {
+        height: 50vh;
+    }
     .container{
         display: block;
     }
