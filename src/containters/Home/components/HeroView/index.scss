@@ -73,10 +73,13 @@
             }
 
             .assistant {
-                border-left: 1px solid #e7e7dc38;
                 height: 75px;
                 display: flex;
-                
+                &::before{
+                    content: "";
+                    border-left: 1px solid #e7e7dc38;
+                    width: 20px;
+                }
                 .content-assistant {
                     display: flex;
                     align-items: center;
