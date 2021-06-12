@@ -7,9 +7,8 @@ import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
 
 export const ProductCard = (props) => {
-    //  ProductCardData from API + jsx + isDiscount: true or fale 
-    const { data, isDiscount, item } = props;
-    console.log('ProductCard', data[0].discount_price);
+    const { isDiscount, dataItem } = props;
+    console.log('ProductCard', dataItem);
 
     return (
         <div>
@@ -21,12 +20,12 @@ export const ProductCard = (props) => {
                                 <IoMdAperture />
                             </div>
                         </IconContext.Provider>
-                        save ${item.discount_amount}
+                        save ${dataItem.discount_amount}
                     </div>
                     : ""
                 }
                 <div className="discounts_list_card_content">
-                    {item.flash_deal === "true" ?
+                    {dataItem.flash_deal === "true" ?
                         <div className="flash_deal_wrapper">
                             <div className="flash_deal">
                                 <IconContext.Provider
@@ -41,13 +40,13 @@ export const ProductCard = (props) => {
                         : ""
                     }
                     <div className="discount_product_image">
-                        <img src={item.image} alt="" />
+                        <img src={dataItem.image} alt="" />
                     </div>
                     <div className="discount_product_brand">
-                        {item.brand}
+                        {dataItem.brand}
                     </div>
                     <div className="body_title">
-                        {item.title}
+                        {dataItem.title}
                     </div>
                     <div className="discount_product_rate">
                         <Rate
@@ -55,24 +54,24 @@ export const ProductCard = (props) => {
                             allowHalf="true"
                             disabled="true"
                         />
-                        <span className="rate_count rate_percentage">{item.rate}</span>
-                        <span className="rate_count">{item.rate_count}</span>
+                        <span className="rate_count rate_percentage">{dataItem.rate}</span>
+                        <span className="rate_count">{dataItem.rate_count}</span>
                     </div>
                     <div className="discount_product_price">
-                        ${item.price} <span className="discount_price">${item.discount_price}</span>
+                        ${dataItem.price} <span className="discount_price">${dataItem.discount_price}</span>
                     </div>
                     <div className="stock_count">
-                        {item.stock_count > "1" ?
-                            <div className={`progress_bar ${item.stock_count > 9 ? "greenstock" : "orangeStock"}`}>
+                        {dataItem.stock_count > "1" ?
+                            <div className={`progress_bar ${dataItem.stock_count > 9 ? "greenstock" : "orangeStock"}`}>
                                 <div className="bar">
                                     <Line
-                                        percent={item.stock_count > 20 ? "80" : "40"}
+                                        percent={dataItem.stock_count > 20 ? "80" : "40"}
                                         strokeWidth="10"
-                                        strokeColor={item.stock_count > 9 ? "#088a3c" : "#ffbc00"}
+                                        strokeColor={dataItem.stock_count > 9 ? "#088a3c" : "#ffbc00"}
                                         trailWidth="9"
                                     />
                                 </div>
-                                <div className="bar_desc">{item.stock_count} Available in stock</div>
+                                <div className="bar_desc">{dataItem.stock_count} Available in stock</div>
                             </div>
                             :
                             <div className="progress_bar" style={{ color: "hotpink" }}>
