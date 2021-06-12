@@ -8,7 +8,8 @@ import 'rc-rate/assets/index.css';
 
 export const ProductCard = (props) => {
     //  ProductCardData from API + jsx + isDiscount: true or fale 
-    const { data, isDiscount } = props;
+    const { data, isDiscount, item } = props;
+    console.log('ProductCard', data[0].discount_price);
 
     return (
         <div>
@@ -20,12 +21,12 @@ export const ProductCard = (props) => {
                                 <IoMdAperture />
                             </div>
                         </IconContext.Provider>
-                        save ${data.discount_amount}
+                        save ${item.discount_amount}
                     </div>
                     : ""
                 }
                 <div className="discounts_list_card_content">
-                    {data.flash_deal === "true" ?
+                    {item.flash_deal === "true" ?
                         <div className="flash_deal_wrapper">
                             <div className="flash_deal">
                                 <IconContext.Provider
@@ -40,13 +41,13 @@ export const ProductCard = (props) => {
                         : ""
                     }
                     <div className="discount_product_image">
-                        <img src={data.image} alt="" />
+                        <img src={item.image} alt="" />
                     </div>
                     <div className="discount_product_brand">
-                        {data.brand}
+                        {item.brand}
                     </div>
                     <div className="body_title">
-                        {data.title}
+                        {item.title}
                     </div>
                     <div className="discount_product_rate">
                         <Rate
@@ -54,24 +55,24 @@ export const ProductCard = (props) => {
                             allowHalf="true"
                             disabled="true"
                         />
-                        <span className="rate_count rate_percentage">{data.rate}</span>
-                        <span className="rate_count">{data.rate_count}</span>
+                        <span className="rate_count rate_percentage">{item.rate}</span>
+                        <span className="rate_count">{item.rate_count}</span>
                     </div>
                     <div className="discount_product_price">
-                        ${data.price} <span className="discount_price">${data.discount_price}</span>
+                        ${item.price} <span className="discount_price">${item.discount_price}</span>
                     </div>
                     <div className="stock_count">
-                        {data.stock_count > "1" ?
-                            <div className={`progress_bar ${data.stock_count > 9 ? "greenstock" : "orangeStock"}`}>
+                        {item.stock_count > "1" ?
+                            <div className={`progress_bar ${item.stock_count > 9 ? "greenstock" : "orangeStock"}`}>
                                 <div className="bar">
                                     <Line
-                                        percent={data.stock_count > 20 ? "80" : "40"}
+                                        percent={item.stock_count > 20 ? "80" : "40"}
                                         strokeWidth="10"
-                                        strokeColor={data.stock_count > 9 ? "#088a3c" : "#ffbc00"}
+                                        strokeColor={item.stock_count > 9 ? "#088a3c" : "#ffbc00"}
                                         trailWidth="9"
                                     />
                                 </div>
-                                <div className="bar_desc">{data.stock_count} Available in stock</div>
+                                <div className="bar_desc">{item.stock_count} Available in stock</div>
                             </div>
                             :
                             <div className="progress_bar" style={{ color: "hotpink" }}>

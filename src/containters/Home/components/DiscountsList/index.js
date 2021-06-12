@@ -35,6 +35,7 @@ export const DiscountsList = (props) => {
                 <ProductCard
                     data={discountListData}
                     isDiscount={true}
+                    item ={item}
                 />
             </div>
             /*
