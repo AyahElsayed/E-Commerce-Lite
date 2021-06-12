@@ -9,7 +9,7 @@ import { FiShoppingCart } from 'react-icons/fi'
 export const Header = () => {
     const [isMenuShown, setIsMenuShown] = useState(false)
     const [isAccountMenuShown, setIsAccountMenuShown] = useState(false)
-    const [isLanguageMenuShown  , setIsLanguageMenuShown] = useState(false)
+    const [isLanguageMenuShown, setIsLanguageMenuShown] = useState(false)
 
     const toggleDropDown = () => {
         setIsMenuShown(!isMenuShown)
@@ -18,15 +18,15 @@ export const Header = () => {
         setIsAccountMenuShown(!isAccountMenuShown)
     }
     const toggleLanguageDropDown = () => {
-        setIsLanguageMenuShown  (!isLanguageMenuShown  )
+        setIsLanguageMenuShown(!isLanguageMenuShown)
     }
     return (
         <>
             <header className="header-top">
-                <div className="container">
+                <div className="header-top-container content-container">
                     <div className="shipping">
-                        <span className="icon"><MdLocalShipping /></span>
-                        <span className="desc">Free shiping on orders over $100</span>
+                        <div className="icon"><MdLocalShipping /></div>
+                        <div className="desc">Free shiping on orders over $100</div>
                     </div>
                     <div className="subscribe">
                         <div className="content">
@@ -47,12 +47,16 @@ export const Header = () => {
 
                     <div className="search_bar">
                         <div className="dropdown">
-                            <button 
-                            onClick={toggleDropDown} 
-                            className="btn_dropdown"
-                            onBlur={()=>setIsMenuShown(false)}
+                            <button
+                                onClick={toggleDropDown}
+                                className="btn_dropdown"
+                                onBlur={() => setIsMenuShown(false)}
                             >
-                                All products <span className="icon"><IoIosArrowDown /></span>
+                                <div className="dropdown_des">
+                                    All products</div>
+                                <span className="icon">
+                                    <IoIosArrowDown />
+                                </span>
                             </button>
                             {isMenuShown &&
                                 <div className="menu">
@@ -61,19 +65,19 @@ export const Header = () => {
                                     <button className="btn_menu">Furniture</button>
                                 </div>
                             }
-
                         </div>
+
                         <input placeholder="Enter keywords" />
-                        <p className="icon_search">
+                        <div className="icon_search">
                             <span><BsSearch /></span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="account">
                         <div className="dropdown">
-                            <button 
-                            onClick={toggleAccountDropDown}
-                            onBlur={()=>setIsAccountMenuShown(false)}
+                            <button
+                                onClick={toggleAccountDropDown}
+                                onBlur={() => setIsAccountMenuShown(false)}
                             >
                                 Account <span className="icon"><IoIosArrowDown /></span>
                             </button>
@@ -89,24 +93,24 @@ export const Header = () => {
                     <div className="lang">
                         <div className="flag">
                             <div className="img"><img src="./assets/flag.png" alt="lang" /></div>
-                            <button 
-                            className="icon" 
-                            onClick={toggleLanguageDropDown}
-                            onBlur={()=>setIsLanguageMenuShown  (false)}
+                            <button
+                                className="icon"
+                                onClick={toggleLanguageDropDown}
+                                onBlur={() => setIsLanguageMenuShown(false)}
                             >
                                 <span ><IoIosArrowDown /></span>
                             </button>
-                            {isLanguageMenuShown   &&
+                            {isLanguageMenuShown &&
                                 <div className="menu">
-                                    <button className="btn_menu">Eng</button>
+                                    <button className="btn_menu">En</button>
                                     <button className="btn_menu">Ar</button>
                                 </div>
                             }
                         </div>
                         <div className="cart">
-                            <span className="icon cart-item"><FiShoppingCart /></span>
-                            <span className="cart-item">cart</span>
-                            <span className="items cart-item">0</span>
+                            <div className="icon cart-item"><FiShoppingCart /></div>
+                            <div className="cart-item">cart</div>
+                            <div className="items cart-item">0</div>
                         </div>
                     </div>
                 </div>
