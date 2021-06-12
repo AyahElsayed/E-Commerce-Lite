@@ -9,6 +9,7 @@ import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
 import { PropTypes } from 'prop-types';
 import { Slider } from '../../../../components/Slider';
+import { ProductCard } from '../../../../components/ProductCard';
 
 export const DiscountsList = (props) => {
 
@@ -30,6 +31,13 @@ export const DiscountsList = (props) => {
 
     const renderItem = (item) => {
         return (
+            <div>
+                <ProductCard
+                    data={discountListData}
+                    isDiscount={true}
+                />
+            </div>
+            /*
             <div className="discounts_list_card">
                 <div className="discount_amount">
                     <IconContext.Provider value={{ color: "white", className: "discount_amount_icon" }}>
@@ -104,6 +112,7 @@ export const DiscountsList = (props) => {
                     </div>
                 </div>
             </div>
+            */
         )
     }
 
