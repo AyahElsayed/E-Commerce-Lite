@@ -44,7 +44,7 @@ export const Home = () => {
         });
 
         discountsList().then(discountListData => {
-            console.log('discountListData', discountListData.data);
+            // console.log('discountListData', discountListData.data);
             setDiscountListData(discountListData.data)
             setDiscountsListDataLoading(false)
         }).catch((error) => {
@@ -52,7 +52,7 @@ export const Home = () => {
         });
 
         promotionsList().then(promotionsListData => {
-            console.log('promotionsListData', promotionsListData.data)
+            // console.log('promotionsListData', promotionsListData.data)
             setPromotionsListData(promotionsListData.data)
             setPromotionsListDataLoading(false)
         }).catch((error) => {

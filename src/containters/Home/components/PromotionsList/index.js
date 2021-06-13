@@ -1,10 +1,8 @@
 import React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
-import { RiTShirtLine, RiMotorbikeLine } from 'react-icons/ri';
-import { GiPerfumeBottle } from 'react-icons/gi';
-import { IconContext } from 'react-icons';
 import PropTypes from 'prop-types';
+import { PromotionCard } from '../../../../components/PromotionCard';
 
 export const PromotionsList = (props) => {
 
@@ -16,16 +14,21 @@ export const PromotionsList = (props) => {
                 <div className="promotions-list-header">
                     <h3 className="promotions-header-title">
                         Active Promotions
-                </h3>
+                    </h3>
                     <div className="all-promotions">
                         <Link
                             to="/promotionsList/allpromotions" >
                             View All Promotions
-                    </Link>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="promotions-list-contnet">
+                    <PromotionCard
+                        promotionsListData={promotionsListData}
+                    />
+                    {/* ///////////////// */}
+                    {/*
                     <div className="promotions-item">
                         <div className="promotions-image">
                             <img src={promotionsListData[0].image} alt="" />
@@ -47,7 +50,10 @@ export const PromotionsList = (props) => {
                             </div>
                         </div>
                     </div>
+                    */}
 
+                    {/* //////////// */}
+                    {/* 
                     <div className="promotions-item">
                         <div className="promotions-details beauty-details">
                             <div className="promotions-icon">
@@ -68,8 +74,10 @@ export const PromotionsList = (props) => {
                         <div className="promotions-image">
                             <img src={promotionsListData[1].image} alt="" />
                         </div>
-                    </div>
-
+                    </div> 
+                    */}
+                    {/* ////////////////// */}
+                    {/*  
                     <div className="promotions-item">
                         <div className="promotions-image">
                             <img src={promotionsListData[2].image} alt="" />
@@ -91,6 +99,7 @@ export const PromotionsList = (props) => {
                             </div>
                         </div>
                     </div>
+                    */}
                 </div>
             </div>
         </div>

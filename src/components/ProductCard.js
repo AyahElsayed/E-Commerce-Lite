@@ -8,7 +8,7 @@ import 'rc-rate/assets/index.css';
 
 export const ProductCard = (props) => {
     const { isDiscount, dataItem } = props;
-    console.log('ProductCard', dataItem);
+    // console.log('ProductCard', dataItem);
 
     return (
         <div>
