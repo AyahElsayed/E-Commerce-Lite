@@ -25,81 +25,8 @@ export const PromotionsList = (props) => {
 
                 <div className="promotions-list-contnet">
                     <PromotionCard
-                        promotionsListData={promotionsListData}
+                        data={promotionsListData}
                     />
-                    {/* ///////////////// */}
-                    {/*
-                    <div className="promotions-item">
-                        <div className="promotions-image">
-                            <img src={promotionsListData[0].image} alt="" />
-                        </div>
-                        <div className="promotions-details">
-                            <div className="promotions-icon">
-                                <IconContext.Provider
-                                    value={{ color: "", className: "promotions-list-icon" }}>
-                                    <div>
-                                        <RiTShirtLine />
-                                    </div>
-                                </IconContext.Provider>
-                            </div>
-                            <div className="promotions-desc">{promotionsListData[0].desc}</div>
-                            <div className="promotions-browse">
-                                <Link >
-                                    Browse Products
-                            </Link>
-                            </div>
-                        </div>
-                    </div>
-                    */}
-
-                    {/* //////////// */}
-                    {/* 
-                    <div className="promotions-item">
-                        <div className="promotions-details beauty-details">
-                            <div className="promotions-icon">
-                                <IconContext.Provider
-                                    value={{ color: "", className: "promotions-list-icon" }}>
-                                    <div>
-                                        <GiPerfumeBottle />
-                                    </div>
-                                </IconContext.Provider>
-                            </div>
-                            <div className="promotions-desc">{promotionsListData[1].desc}</div>
-                            <div className="promotions-browse">
-                                <Link >
-                                    Browse Products
-                            </Link>
-                            </div>
-                        </div>
-                        <div className="promotions-image">
-                            <img src={promotionsListData[1].image} alt="" />
-                        </div>
-                    </div> 
-                    */}
-                    {/* ////////////////// */}
-                    {/*  
-                    <div className="promotions-item">
-                        <div className="promotions-image">
-                            <img src={promotionsListData[2].image} alt="" />
-                        </div>
-                        <div className="promotions-details">
-                            <div className="promotions-icon">
-                                <IconContext.Provider
-                                    value={{ color: "", className: "promotions-list-icon" }}>
-                                    <div>
-                                        <RiMotorbikeLine />
-                                    </div>
-                                </IconContext.Provider>
-                            </div>
-                            <div className="promotions-desc">{promotionsListData[2].desc}</div>
-                            <div className="promotions-browse">
-                                <Link >
-                                    Browse Products
-                            </Link>
-                            </div>
-                        </div>
-                    </div>
-                    */}
                 </div>
             </div>
         </div>

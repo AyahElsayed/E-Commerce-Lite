@@ -5,34 +5,30 @@ import { GiPerfumeBottle } from 'react-icons/gi';
 import { IconContext } from 'react-icons';
 
 export const PromotionCard = (props) => {
-    const { promotionsListData } = props;
-    // console.log("PromotionCard", promotionsListData);
+    const { data } = props;
 
-    if (promotionsListData.name === "beauty")
+    if (data.name === "beauty")
         return (
             <BottomImagePromotion
-                promotionsListData={promotionsListData}
+            data={data}
             />
         )
-
-    else
         return (<TopImagePromotion
-            promotionsListData={promotionsListData}
+            data={data}
         />)
 };
 
 const TopImagePromotion = (props) => {
-    const { promotionsListData } = props;
-    // console.log("TopImagePromotion", promotionsListData);
+    const { data } = props;
     return (
         <>
-            {promotionsListData.map((item) =>
+            {data.map((item) =>
                 item.name === "beauty" ?
-                    <BottomImagePromotion promotionsListData={promotionsListData} />
+                    <BottomImagePromotion data={data} />
                     :
                     <div className="promotions-item">
                         <div className="promotions-image">
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt={item.name} />
                         </div>
                         <div className="promotions-details">
                             <div className="promotions-icon">
@@ -61,8 +57,7 @@ const TopImagePromotion = (props) => {
 };
 
 const BottomImagePromotion = (props) => {
-    const { promotionsListData } = props;
-    // console.log("BottomImagePromotion", promotionsListData);
+    const { data } = props;
     return (
         <div className="promotions-item">
             <div className="promotions-details beauty-details">
@@ -74,7 +69,7 @@ const BottomImagePromotion = (props) => {
                         </div>
                     </IconContext.Provider>
                 </div>
-                <div className="promotions-desc">{promotionsListData[1].desc}</div>
+                <div className="promotions-desc">{data[1].desc}</div>
                 <div className="promotions-browse">
                     <Link >
                         Browse Products
@@ -82,7 +77,7 @@ const BottomImagePromotion = (props) => {
                 </div>
             </div>
             <div className="promotions-image">
-                <img src={promotionsListData[1].image} alt="" />
+                <img src={data[1].image} alt={data[1].name} />
             </div>
         </div>
     )

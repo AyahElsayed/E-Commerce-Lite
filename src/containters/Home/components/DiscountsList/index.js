@@ -28,7 +28,7 @@ export const DiscountsList = (props) => {
             <div>
                 <ProductCard
                     isDiscount={true}
-                    dataItem ={item}
+                    data ={item}
                 />
             </div>
         )
