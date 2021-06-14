@@ -27,8 +27,8 @@ export const DiscountsList = (props) => {
         return (
             <div>
                 <ProductCard
-                    isDiscount={true}
-                    data ={item}
+                    isDiscount
+                    itemData ={item} 
                 />
             </div>
         )
