@@ -97,7 +97,7 @@ export const ProductCard = (props) => {
                         <div className={`progress_bar ${getProgressBarColor(itemData.stock_count)}`}>
                             <div className="bar">
                                 <Line
-                                    percent={itemData.stock_count > 20 ? "80" : "40"}
+                                    percent={itemData.stock_percentage}
                                     strokeWidth="10"
                                     strokeColor={getProgressBarStrokeColor(itemData.stock_count)}
                                     trailWidth="9"

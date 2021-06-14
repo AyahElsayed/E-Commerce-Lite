@@ -24,9 +24,13 @@ export const PromotionsList = (props) => {
                 </div>
 
                 <div className="promotions-list-contnet">
-                    <PromotionCard
-                        data={promotionsListData}
-                    />
+                    {
+                        promotionsListData.map(promotion => (
+                            <PromotionCard
+                                itemData={promotion}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </div>
