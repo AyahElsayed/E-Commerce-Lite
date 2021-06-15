@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as RemixIcons from 'react-icons/ri';
-import { GiPerfumeBottle } from 'react-icons/gi';
+import * as GiIcons from 'react-icons/gi';
 import { IconContext } from 'react-icons';
 
 export const PromotionCard = (props) => {
@@ -22,8 +22,7 @@ export const PromotionCard = (props) => {
 const TopImagePromotion = (props) => {
     const { itemData } = props;
 
-    const RiTShirtLine = RemixIcons["RiTShirtLine"];
-    const RiMotorbikeLine = RemixIcons["RiMotorbikeLine"];
+    const TopIcon = RemixIcons[itemData.icon];
 
     return (
         <div className="promotions-item">
@@ -35,11 +34,7 @@ const TopImagePromotion = (props) => {
                     <IconContext.Provider
                         value={{ color: "", className: "promotions-list-icon" }}>
                         <div>
-                            {itemData.name === "sweater" ?
-                                <RiTShirtLine />
-                                :
-                                <RiMotorbikeLine />
-                            }
+                            <TopIcon />
                         </div>
                     </IconContext.Provider>
                 </div>
@@ -57,6 +52,8 @@ const TopImagePromotion = (props) => {
 const BottomImagePromotion = (props) => {
     const { itemData } = props;
 
+    const BottomIcon = GiIcons[itemData.icon];
+
     return (
         <div className="promotions-item">
             <div className="promotions-details beauty-details" style={{backgroundColor: itemData.bg_color}}>
@@ -64,7 +61,7 @@ const BottomImagePromotion = (props) => {
                     <IconContext.Provider
                         value={{ color: "", className: "promotions-list-icon" }}>
                         <div>
-                            <GiPerfumeBottle />
+                            <BottomIcon />
                         </div>
                     </IconContext.Provider>
                 </div>

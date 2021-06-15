@@ -319,21 +319,24 @@
       "name":"sweater",
       "image":"./assets/sweater.JPG",
       "desc":"Up to 25% off on all casual sweaters",
-      "bg_color": "#F6F5FA"
+      "bg_color": "#F6F5FA",
+      "icon":"RiTShirtLine"
     },
     {
       "id":2,
       "name":"beauty",
       "image":"./assets/beautyProduct.JPG",
       "desc":"up to 20% off on beauty products",
-      "bg_color": "#E8F8F8"
+      "bg_color": "#E8F8F8",
+      "icon":"GiPerfumeBottle"
     },
     {
       "id":3,
       "name":"bike",
       "image":"./assets/bike.JPG",
       "desc":"Exciting bike rides with amazing equipment",
-      "bg_color": "#F6FAF4"
+      "bg_color": "#F6FAF4",
+      "icon":"RiMotorbikeLine"
     }
   ]
 }
