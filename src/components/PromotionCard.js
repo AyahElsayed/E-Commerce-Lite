@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as RemixIcons from 'react-icons/ri';
-import * as GiIcons from 'react-icons/gi';
+import * as Icons from 'react-icons/all';
 import { IconContext } from 'react-icons';
 
 export const PromotionCard = (props) => {
@@ -15,26 +14,26 @@ export const PromotionCard = (props) => {
         );
 
     return (
-        <TopImagePromotion itemData={itemData}/>
+        <TopImagePromotion itemData={itemData} />
     );
 };
 
 const TopImagePromotion = (props) => {
     const { itemData } = props;
 
-    const TopIcon = RemixIcons[itemData.icon];
+    const Icon = Icons[itemData.icon];
 
     return (
         <div className="promotions-item">
             <div className="promotions-image">
                 <img src={itemData.image} alt={itemData.name} />
             </div>
-            <div className="promotions-details" style={{backgroundColor: itemData.bg_color}}>
+            <div className="promotions-details" style={{ backgroundColor: itemData.bg_color }}>
                 <div className="promotions-icon">
                     <IconContext.Provider
                         value={{ color: "", className: "promotions-list-icon" }}>
                         <div>
-                            <TopIcon />
+                            <Icon />
                         </div>
                     </IconContext.Provider>
                 </div>
@@ -52,16 +51,16 @@ const TopImagePromotion = (props) => {
 const BottomImagePromotion = (props) => {
     const { itemData } = props;
 
-    const BottomIcon = GiIcons[itemData.icon];
+    const Icon = Icons[itemData.icon];
 
     return (
         <div className="promotions-item">
-            <div className="promotions-details beauty-details" style={{backgroundColor: itemData.bg_color}}>
+            <div className="promotions-details beauty-details" style={{ backgroundColor: itemData.bg_color }}>
                 <div className="promotions-icon">
                     <IconContext.Provider
                         value={{ color: "", className: "promotions-list-icon" }}>
                         <div>
-                            <BottomIcon />
+                            <Icon />
                         </div>
                     </IconContext.Provider>
                 </div>
