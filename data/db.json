@@ -99,7 +99,8 @@
       "rate_count": " (20)",
       "price": "2,899,99",
       "discount_price": "3,000,00",
-      "stock_count": "32"
+      "stock_count": "32",
+      "stock_percentage": 80
     },
     {
       "id": 2,
@@ -112,7 +113,8 @@
       "rate_count": " (293)",
       "price": "250",
       "discount_price": "260",
-      "stock_count": "4"
+      "stock_count": "4",
+      "stock_percentage": 30
     },
     {
       "id": 3,
@@ -125,7 +127,8 @@
       "rate_count": " (293)",
       "price": "125",
       "discount_price": "225",
-      "stock_count": "1"
+      "stock_count": "1",
+      "stock_percentage": 10
     },
     {
       "id": 4,
@@ -138,7 +141,8 @@
       "rate_count": " (1,290)",
       "price": "39.99",
       "discount_price": "59.99",
-      "stock_count": "10"
+      "stock_count": "10",
+      "stock_percentage": 40
     },
     {
       "id": 5,
@@ -151,7 +155,8 @@
       "rate_count": " (20)",
       "price": "2,899,99",
       "discount_price": "3,000,00",
-      "stock_count": "32"
+      "stock_count": "32",
+      "stock_percentage": 80
     },
     {
       "id": 6,
@@ -164,7 +169,8 @@
       "rate_count": " (293)",
       "price": "250",
       "discount_price": "260",
-      "stock_count": "4"
+      "stock_count": "4",
+      "stock_percentage": 30
     },
     {
       "id": 7,
@@ -177,7 +183,8 @@
       "rate_count": " (293)",
       "price": "125",
       "discount_price": "225",
-      "stock_count": "1"
+      "stock_count": "1",
+      "stock_percentage": 10
     },
     {
       "id": 8,
@@ -190,7 +197,8 @@
       "rate_count": " (1,290)",
       "price": "39.99",
       "discount_price": "59.99",
-      "stock_count": "10"
+      "stock_count": "10",
+      "stock_percentage": 40
     },
     {
       "id": 9,
@@ -203,7 +211,8 @@
       "rate_count": " (20)",
       "price": "2,899,99",
       "discount_price": "3,000,00",
-      "stock_count": "32"
+      "stock_count": "32",
+      "stock_percentage": 80
     },
     {
       "id": 10,
@@ -216,7 +225,8 @@
       "rate_count": " (293)",
       "price": "250",
       "discount_price": "260",
-      "stock_count": "4"
+      "stock_count": "4",
+      "stock_percentage": 30
     },
     {
       "id": 11,
@@ -229,7 +239,8 @@
       "rate_count": " (293)",
       "price": "125",
       "discount_price": "225",
-      "stock_count": "1"
+      "stock_count": "1",
+      "stock_percentage": 10
     },
     {
       "id": 12,
@@ -242,7 +253,8 @@
       "rate_count": " (1,290)",
       "price": "39.99",
       "discount_price": "59.99",
-      "stock_count": "10"
+      "stock_count": "10",
+      "stock_percentage": 40
     },
     {
       "id": 13,
@@ -255,7 +267,8 @@
       "rate_count": " (20)",
       "price": "2,899,99",
       "discount_price": "3,000,00",
-      "stock_count": "32"
+      "stock_count": "32",
+      "stock_percentage": 80
     },
     {
       "id": 14,
@@ -268,7 +281,8 @@
       "rate_count": " (293)",
       "price": "250",
       "discount_price": "260",
-      "stock_count": "4"
+      "stock_count": "4",
+      "stock_percentage": 30
     },
     {
       "id": 15,
@@ -281,7 +295,8 @@
       "rate_count": " (293)",
       "price": "125",
       "discount_price": "225",
-      "stock_count": "1"
+      "stock_count": "1",
+      "stock_percentage": 10
     },
     {
       "id": 16,
@@ -294,7 +309,8 @@
       "rate_count": " (1,290)",
       "price": "39.99",
       "discount_price": "59.99",
-      "stock_count": "10"
+      "stock_count": "10",
+      "stock_percentage": 40
     }
   ],
   "homePromotions":[
@@ -302,19 +318,25 @@
       "id":1,
       "name":"sweater",
       "image":"./assets/sweater.JPG",
-      "desc":"Up to 25% off on all casual sweaters"
+      "desc":"Up to 25% off on all casual sweaters",
+      "bg_color": "#F6F5FA",
+      "icon":"RiTShirtLine"
     },
     {
       "id":2,
       "name":"beauty",
       "image":"./assets/beautyProduct.JPG",
-      "desc":"up to 20% off on beauty products"
+      "desc":"up to 20% off on beauty products",
+      "bg_color": "#E8F8F8",
+      "icon":"GiPerfumeBottle"
     },
     {
       "id":3,
       "name":"bike",
       "image":"./assets/bike.JPG",
-      "desc":"Exciting bike rides with amazing equipment"
+      "desc":"Exciting bike rides with amazing equipment",
+      "bg_color": "#F6FAF4",
+      "icon":"RiMotorbikeLine"
     }
   ]
 }

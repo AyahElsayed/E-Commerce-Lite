@@ -29,14 +29,12 @@ export const Home = () => {
 
     useEffect(() => {
         heroView().then(heroViewData => {
-            // console.log('heroViewData', heroViewData.data);
             setHeroViewData(heroViewData.data);
         }).catch((error) => {
             console.log('heroView error', error);
         });
 
         categoryList().then(categoryListData => {
-            // console.log('categoryList', categoryListData.data);
             setCategoryListData(categoryListData.data);
             setCategoryListDataLoading(false)
         }).catch((error) => {
@@ -44,7 +42,6 @@ export const Home = () => {
         });
 
         discountsList().then(discountListData => {
-            console.log('discountListData', discountListData.data);
             setDiscountListData(discountListData.data)
             setDiscountsListDataLoading(false)
         }).catch((error) => {
@@ -52,7 +49,6 @@ export const Home = () => {
         });
 
         promotionsList().then(promotionsListData => {
-            console.log('promotionsListData', promotionsListData.data)
             setPromotionsListData(promotionsListData.data)
             setPromotionsListDataLoading(false)
         }).catch((error) => {
