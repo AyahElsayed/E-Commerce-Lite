@@ -1,16 +1,35 @@
-// Header top background-color #340EC1
-// Header search background-color #4D25E0
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
 
 .header-top {
     background-color: #340EC1;
-    height: 60px;
+    height: 9vh;
     color: #fff;
     display: flex;
+
+    @include mQ(770px) {
+        height: 8vh;
+    }
+
+    @include mQ(320px) {
+        height: 11vh;
+    }
 
     .header-top-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mQ(320px) {
+            flex-direction: column;
+        }
+
+        @include mQ(770px) {
+            align-items: stretch;
+        }
     }
 
     .shipping {
@@ -19,6 +38,10 @@
         align-items: center;
         flex: 4;
         justify-content: flex-start;
+
+        @include mQ(770px) {
+            flex: 1.5;
+        }
 
         .desc {
             font-size: 12px;
@@ -64,21 +87,41 @@
 
 .header_search_bar {
     background-color: #4D25E0;
-    height: 90px;
+    height: 11vh;
     color: #fff;
     display: flex;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    @include mQ(770px) {
+        height: 26vh;
+    }
+
+    @include mQ(320px) {
+        height: 42vh;
+    }
+
+
 
     .container {
         justify-content: space-around;
         margin: auto;
         align-items: center;
 
+        @include mQ(770px) {
+            height: 80%;
+            flex-direction: column;
+        }
+
         .logo {
             flex: 1;
-            font-size: 27px;
+            font-size: 2rem;
             font-weight: 300;
             display: flex;
+
+            @include mQ(770px) {
+                flex: 4;
+                align-items: center;
+            }
 
             .subLogo {
                 font-weight: 500;
@@ -91,6 +134,10 @@
             justify-content: center;
             align-items: center;
             position: relative;
+
+            @include mQ(770px) {
+                width: 100%;
+            }
 
             .dropdown {
                 display: flex;
@@ -112,6 +159,10 @@
                 align-items: center;
                 flex: 1;
 
+                @include mQ(770px) {
+                    height: 33px;
+                }
+
                 .dropdown_des {
                     justify-content: flex-end;
                     flex: 2;
@@ -131,6 +182,10 @@
                 border-radius: 0px 8px 8px 0;
                 border-style: none;
                 text-indent: 2%;
+
+                @include mQ(770px) {
+                    height: 31px !important;
+                }
 
                 &:focus-visible {
                     outline: none;
@@ -152,6 +207,11 @@
                 width: 100%;
                 border-radius: 6px;
                 overflow: hidden;
+
+                @include mQ(320px) {
+                    width: auto;
+                    z-index: 1;
+                }
 
                 .btn_menu {
                     height: 40px;
@@ -175,6 +235,10 @@
             display: flex;
             justify-content: center;
 
+            @include mQ(770px) {
+                flex: 3;
+            }
+
             button {
                 background-color: transparent;
                 color: #fff;
@@ -195,6 +259,12 @@
                     display: inline-block;
                     left: 72%;
                     top: 17%;
+
+                    @include mQ(770px) {
+                        left: 100%;
+                        top: 37%;
+                    }
+
                 }
             }
 
@@ -206,6 +276,10 @@
                 width: 66%;
                 border-radius: 6px;
                 overflow: hidden;
+
+                @include mQ(770px) {
+                    width: 100%;
+                }
 
 
                 .btn_menu {
@@ -230,6 +304,10 @@
             background: #f9f6f645;
             height: 36px;
             margin: 0 1%;
+
+            @include mQ(770px) {
+                display: none;
+            }
         }
 
         .lang {
