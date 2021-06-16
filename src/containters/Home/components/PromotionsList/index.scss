@@ -1,8 +1,16 @@
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
 .promotions-List{
     display: flex;
     height: 65vh;
     @media (min-width:2280px) {
         height: 50vh;
+    }
+    @include mQ(770px) {
+        height: 75vh;
     }
     .container{
         display: block;
@@ -14,11 +22,17 @@
         justify-content: space-between;
         .promotions-header-title{
             font-size: 29px;
-            color: #1c0671
+            color: #1c0671;
+            @include mQ(320px) {
+                font-size: 1rem;
+            }
         }
         .all-promotions{
             font-size: .8rem;
             font-weight: 700;
+            @include mQ(320px) {
+                font-size: .5rem;
+            }
             a{
                 text-decoration: none;
                 color: #1c0671
@@ -28,6 +42,10 @@
     .promotions-list-contnet{
         display: flex;
         justify-content: space-between;
+        @include mQ(770px) {
+            flex-direction: column;
+            align-items: center;
+        }
         .promotions-item{
             display: flex;
             flex-direction: column;
@@ -46,10 +64,20 @@
                 min-height: 556px;
                 min-width: 358px;           
             }
+            @include mQ(770px) {
+                min-height: 45vh;
+                margin: 2%;
+            }
+            @include mQ(320px) {
+                min-height: 68vh;
+            }
 
             .promotions-image{
                 flex: 1;
                 width: 100%;
+                @include mQ(770px) {
+                    flex: 0;
+                }
                 img{
                     height: 100%;
                     width: 100%;
