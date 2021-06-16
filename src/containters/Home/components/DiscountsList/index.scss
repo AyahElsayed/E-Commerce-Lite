@@ -1,8 +1,19 @@
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
 .dscounts_list {
     height: 68vh;
     overflow: hidden;
     @media (min-width:2280px) {
         height: 44vh;
+    }
+    @include mQ(770px) {
+        height: 55vh;
+    }
+    @include mQ(320px) {
+        height: 94vh;
     }
 
     .slider_container {
@@ -15,13 +26,19 @@
         justify-content: space-between;
 
         .header_title {
-            font-size: 29px;
-            color: #1c0671
+            font-size: 2rem;
+            color: #1c0671;
+            @include mQ(320px) {
+                font-size: 1rem;
+            }
         }
 
         .all_products {
             font-size: .8rem;
             font-weight: 700;
+            @include mQ(320px) {
+                font-size: .5rem;
+            }
 
             a {
                 text-decoration: none;
@@ -39,7 +56,6 @@
             box-shadow: 6px 4px 11px 0px #d2c9c975;
             border-radius: 8px;
             width: 12vw !important;
-            // margin: auto;
             margin-bottom: 12px;
             padding: 0 12%;
             height: 45vh;
@@ -48,6 +64,15 @@
                 width: 72% !important;
                 padding: 0 13%;
                 max-height: 32vh;
+            }
+            @include mQ(770px) {
+                width: 23vw !important;
+                height: 40vh;
+            }
+            @include mQ(320px) {
+                width: 43vw !important;
+                height: 60vh;
+                padding: 0 16%;
             }
 
             .discounts_list_card_content {
@@ -120,9 +145,18 @@
                     display: flex;
                     align-items: center;
                     flex: 1;
+                    
+                    .rc-rate{
+                        @include mQ(320px) {
+                            font-size: 11px;
+                        }
+                    }
 
                     .rate_count {
                         font-size: 12px;
+                        @include mQ(320px) {
+                            font-size: 11px;
+                        }
                     }
 
                     .rate_percentage {
@@ -191,8 +225,6 @@
                     .hotpinkBar{
                         color: hotpink;
                     }
-
-
                 }
             }
 
@@ -222,4 +254,17 @@
 
 .slider-container {
     display: block;
+
+    
+}
+.slick-dots {
+    @include mQ(320px) {
+        bottom: -75px !important;
+    }
+
+    ul {
+        @include mQ(320px) {
+            padding: 0;
+        }
+    }
 }
