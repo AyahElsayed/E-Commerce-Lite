@@ -1,19 +1,36 @@
-@mixin mQ($arg) {
-    @media screen and (max-width: $arg) {
-        @content;
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
     }
 }
+
 .dscounts_list {
     height: 68vh;
     overflow: hidden;
-    @media (min-width:2280px) {
+
+    @include mQ(280px) {
+        height: 80vh;
+    }
+
+    @include mQ(375px) {
+        height: 70vh;
+    }
+    @include mQ(768px) {
+        height: 60vh;
+    }
+    @include mQ(1024px) {
+        height: 40vh;
+    }
+    @include mQ(2280px) {
         height: 44vh;
-    }
-    @include mQ(770px) {
-        height: 55vh;
-    }
-    @include mQ(320px) {
-        height: 94vh;
     }
 
     .slider_container {
@@ -28,7 +45,8 @@
         .header_title {
             font-size: 2rem;
             color: #1c0671;
-            @include mQ(320px) {
+
+            @include mQ(770px,280px) {
                 font-size: 1rem;
             }
         }
@@ -36,7 +54,8 @@
         .all_products {
             font-size: .8rem;
             font-weight: 700;
-            @include mQ(320px) {
+
+            @include mQ(770px,280px) {
                 font-size: .5rem;
             }
 
@@ -59,20 +78,31 @@
             margin-bottom: 12px;
             padding: 0 12%;
             height: 45vh;
-            
-            @media (min-width:2280px) {
+
+            @include mQ(280px) {
+                width: 43vw !important;
+                height: 52vh;
+                padding: 0 16%;
+            }
+            @include mQ(375px) {
+                height: 45vh;
+            }
+
+            @include mQ(540px) {
+                width: 21vw !important;
+                height: 45vh;
+            }
+            @include mQ(1025px, 1024px) {
+                width: 10vw !important;
+                height: 29vh;
+                padding: 0 15%;
+
+            }
+
+            @include mQ(2280px) {
                 width: 72% !important;
                 padding: 0 13%;
                 max-height: 32vh;
-            }
-            @include mQ(770px) {
-                width: 23vw !important;
-                height: 40vh;
-            }
-            @include mQ(320px) {
-                width: 43vw !important;
-                height: 60vh;
-                padding: 0 16%;
             }
 
             .discounts_list_card_content {
@@ -88,7 +118,8 @@
                     background-color: #ED67A7;
                     border-radius: 8px;
                     padding: 5px;
-                    @media (min-width:2280px) {
+
+                    @include mQ(2280px) {
                         top: 40px;
                     }
 
@@ -120,7 +151,7 @@
                     font-weight: 500;
                     text-transform: uppercase;
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 14px;
                     }
                 }
@@ -136,7 +167,7 @@
                     max-width: 84%;
 
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 15px;
                     }
                 }
@@ -145,16 +176,17 @@
                     display: flex;
                     align-items: center;
                     flex: 1;
-                    
-                    .rc-rate{
-                        @include mQ(320px) {
+
+                    .rc-rate {
+                        @include mQ(768px,280px) {
                             font-size: 11px;
                         }
                     }
 
                     .rate_count {
                         font-size: 12px;
-                        @include mQ(320px) {
+
+                        @include mQ(768px,280px) {
                             font-size: 11px;
                         }
                     }
@@ -171,10 +203,11 @@
                     align-items: center;
                     font-size: 17px;
                     flex: 1;
-                    color: #0b0b90;;
+                    color: #0b0b90;
                     font-weight: bolder;
+                    flex-wrap: wrap;
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 19px;
                     }
 
@@ -194,7 +227,7 @@
                     display: flex;
                     align-items: center;
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 15px;
                     }
 
@@ -222,7 +255,8 @@
                     .orangeBar {
                         color: #ffbc00;
                     }
-                    .hotpinkBar{
+
+                    .hotpinkBar {
                         color: hotpink;
                     }
                 }
@@ -235,11 +269,11 @@
                 align-self: flex-start;
                 border-radius: 8px;
                 font-size: 1rem;
-                // min-height: 28px;
                 padding: 0 5px;
                 color: #fff;
                 flex: 1;
-                @media (min-width:2280px) {
+
+                @include mQ(2280px) {
                     flex: .8;
                 }
 
@@ -254,16 +288,15 @@
 
 .slider-container {
     display: block;
-
-    
 }
+
 .slick-dots {
-    @include mQ(320px) {
+    @include mQ(770px,280px) {
         bottom: -75px !important;
     }
 
     ul {
-        @include mQ(320px) {
+        @include mQ(770px,280px) {
             padding: 0;
         }
     }
