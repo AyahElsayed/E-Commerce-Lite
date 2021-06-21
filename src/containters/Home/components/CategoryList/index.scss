@@ -1,6 +1,14 @@
-@mixin mQ($arg) {
-    @media screen and (max-width: $arg) {
-        @content;
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
     }
 }
 
@@ -8,16 +16,24 @@
     display: flex;
     height: 55vh;
 
-    @media (min-width:2280px) {
-        height: 40vh;
-    }
-
-    @include mQ(770px) {
-        height: 46vh;
+    @include mQ(280px) {
+        height: 50vh;
     }
 
     @include mQ(320px) {
-        height: 65vh;
+        height: 57vh;
+    }
+
+    @include mQ(1023px, 375px) {
+        height: 37vh;
+    }
+
+    @include mQ(1025px, 1024px) {
+        height: 25vh;
+    }
+
+    @include mQ(2280px) {
+        height: 40vh;
     }
 
     .home_category_mid_card {
@@ -48,7 +64,7 @@
 
 
         .slick-dots {
-            @include mQ(320px) {
+            @include mQ(280px) {
                 bottom: -60px;
             }
         }
@@ -66,14 +82,40 @@
         height: 35vh;
         border-radius: 12px;
 
-        @include mQ(770px) {
+        @include mQ(281px, 280px) {
+            height: 24vh;
             width: 94% !important;
             margin: 0 4% !important;
-            height: 28vh;
+        }
+
+        @include mQ(282px) {
+            width: 94% !important;
+            margin: 0 4% !important;
+            height: 22vh;
         }
 
         @include mQ(320px) {
+            height: 29vh;
+        }
+
+        @include mQ(375px) {
+            height: 20vh;
+        }
+
+        @include mQ(540px) {
+            height: 23vh;
+        }
+
+        @include mQ(768px) {
+            height: 17vh;
+        }
+
+        @include mQ(770px) {
             height: 36vh;
+        }
+
+        @include mQ(1025px, 1024px) {
+            height: 15vh;
         }
 
         .home_category_content {
@@ -91,12 +133,16 @@
                 font-weight: 700;
                 font-size: 1.6rem;
 
-                @media (min-width:2280px) {
-                    font-size: 2rem;
+                @include mQ(770px, 280px) {
+                    font-size: 1.1rem;
                 }
 
-                @include mQ(320px) {
-                    font-size: 1.4rem;
+                @include mQ(1025px, 1024px) {
+                    align-items: center;
+                }
+
+                @include mQ(2280px) {
+                    font-size: 2rem;
                 }
             }
 
@@ -107,12 +153,16 @@
                 display: flex;
                 align-items: center;
 
-                @media (min-width:2280px) {
-                    font-size: 1.2rem;
+                @include mQ(770px, 280px) {
+                    font-size: .7rem;
                 }
 
-                @include mQ(320px) {
-                    font-size: .8rem;
+                @include mQ(1025px, 1024px) {
+                    font-size: .9rem;
+                }
+
+                @include mQ(2280px) {
+                    font-size: 1.2rem;
                 }
             }
 
@@ -132,13 +182,17 @@
                     align-items: center;
                     flex: .8;
 
-                    @media (min-width:2280px) {
-                        flex: .7;
-                        height: 55px;
+                    @include mQ(770px, 280px) {
+                        height: 30px;
                     }
 
-                    @include mQ(770px) {
-                        height: 39px;
+                    @include mQ(1025px, 1024px) {
+                        height: 40px;
+                    }
+
+                    @include mQ(2280px) {
+                        flex: .7;
+                        height: 55px;
                     }
 
                     a {
@@ -147,12 +201,16 @@
                         font-size: 1rem;
                         font-weight: 600;
 
-                        @media (min-width:2280px) {
-                            font-size: 1.3rem;
+                        @include mQ(770px, 280px) {
+                            font-size: .7rem;
                         }
 
-                        @include mQ(320px) {
-                            font-size: .8rem;
+                        @include mQ(1025px, 1024px) {
+                            font-size: .9rem;
+                        }
+
+                        @include mQ(2280px) {
+                            font-size: 1.3rem;
                         }
                     }
                 }
