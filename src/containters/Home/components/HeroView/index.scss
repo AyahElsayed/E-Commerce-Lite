@@ -18,10 +18,15 @@
 
     @include mQ(360px, 280px) {
         height: 72vh;
+        padding-top: 7%;
     }
 
     @include mQ(415px, 361px) {
         height: 55vh;
+    }
+
+    @include mQ(376px, 375px) {
+        height: 62vh;
     }
 
     @include mQ(1025px, 416px) {
@@ -50,7 +55,11 @@
                 flex: 2;
             }
 
-            @include mQ(415px, 375px) {
+            @include mQ(376px, 375px) {
+                height: 70vh;
+            }
+
+            @include mQ(415px, 377px) {
                 height: 66vh;
             }
 

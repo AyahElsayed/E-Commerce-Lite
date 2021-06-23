@@ -23,12 +23,15 @@
     @include mQ(375px) {
         height: 70vh;
     }
-    @include mQ(768px) {
+
+    @include mQ(1023px, 768px) {
         height: 60vh;
     }
-    @include mQ(1024px) {
+
+    @include mQ(1025px, 1024px) {
         height: 40vh;
     }
+
     @include mQ(2280px) {
         height: 44vh;
     }
@@ -46,7 +49,7 @@
             font-size: 2rem;
             color: #1c0671;
 
-            @include mQ(770px,280px) {
+            @include mQ(770px, 280px) {
                 font-size: 1rem;
             }
         }
@@ -55,7 +58,7 @@
             font-size: .8rem;
             font-weight: 700;
 
-            @include mQ(770px,280px) {
+            @include mQ(770px, 280px) {
                 font-size: .5rem;
             }
 
@@ -77,26 +80,28 @@
             width: 12vw !important;
             margin-bottom: 12px;
             padding: 0 12%;
-            height: 45vh;
+            height: 46vh;
 
-            @include mQ(280px) {
+            @include mQ(370px, 280px) {
                 width: 43vw !important;
                 height: 52vh;
                 padding: 0 16%;
             }
-            @include mQ(375px) {
-                height: 45vh;
+
+            @include mQ(540px,375px) {
+                height: 50vh;
+                width: 48vw !important;
             }
 
-            @include mQ(540px) {
+            @include mQ(770px, 540px) {
                 width: 21vw !important;
                 height: 45vh;
             }
-            @include mQ(1025px, 1024px) {
-                width: 10vw !important;
-                height: 29vh;
-                padding: 0 15%;
 
+            @include mQ(1025px, 1024px) {
+                width: 13vw !important;
+                height: 27vh;
+                padding: 0px 6%;
             }
 
             @include mQ(2280px) {
@@ -178,15 +183,19 @@
                     flex: 1;
 
                     .rc-rate {
-                        @include mQ(768px,280px) {
+                        @include mQ(768px, 280px) {
                             font-size: 11px;
+                        }
+
+                        @include mQ(1025px, 1024px) {
+                            font-size: 8px;
                         }
                     }
 
                     .rate_count {
                         font-size: 12px;
 
-                        @include mQ(768px,280px) {
+                        @include mQ(768px, 280px) {
                             font-size: 11px;
                         }
                     }
@@ -291,12 +300,12 @@
 }
 
 .slick-dots {
-    @include mQ(770px,280px) {
+    @include mQ(770px, 280px) {
         bottom: -75px !important;
     }
 
     ul {
-        @include mQ(770px,280px) {
+        @include mQ(770px, 280px) {
             padding: 0;
         }
     }

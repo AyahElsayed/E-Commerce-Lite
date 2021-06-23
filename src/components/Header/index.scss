@@ -33,6 +33,8 @@
 
         @include mQ(760px, 280px) {
             flex-direction: column;
+            align-items: stretch;
+            height: 7vh;
         }
     }
 
@@ -44,7 +46,8 @@
         justify-content: flex-start;
 
         @include mQ(770px, 320px) {
-            flex: 1.5;
+            flex: 1;
+            align-self: center;
         }
 
         @include mQ(1025px, 780px) {
@@ -254,6 +257,8 @@
                     border-bottom: 1px solid #d4cece;
                     font-size: 1em;
                     font-weight: 600;
+                    transition: width 600ms ease-out, height 600ms ease-out;
+
 
                     &:hover {
                         background-color: #e9e6e6;

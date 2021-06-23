@@ -87,7 +87,7 @@
                 min-height: 75vh;
             }
 
-            @include mQ(375px) {
+            @include mQ(539px,375px) {
                 min-height: 60vh;
             }
 
@@ -95,11 +95,11 @@
                 min-height: 58vh;
             }
 
-            @include mQ(768px) {
+            @include mQ(1023px,768px) {
                 min-height: 45vh;
             }
 
-            @include mQ(1024px) {
+            @include mQ(1025px,1024px) {
                 min-height: 34vh;
             }
 
@@ -116,6 +116,7 @@
             .promotions-image {
                 flex: 1;
                 width: 100%;
+                display: flex;
 
                 @include mQ(280px) {
                     flex: 0;
