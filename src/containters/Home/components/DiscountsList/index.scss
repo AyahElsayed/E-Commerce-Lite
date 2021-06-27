@@ -91,11 +91,13 @@
             @include mQ(540px,375px) {
                 height: 50vh;
                 width: 48vw !important;
+                padding: 0 16%;
             }
 
-            @include mQ(770px, 540px) {
+            @include mQ(768px, 540px) {
                 width: 21vw !important;
                 height: 45vh;
+                padding: 0 17%;
             }
 
             @include mQ(1025px, 1024px) {

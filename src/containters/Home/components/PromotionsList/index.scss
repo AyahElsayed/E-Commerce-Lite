@@ -71,45 +71,41 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 462px;
+            height: 462px;
             border-radius: 11px;
             background-color: #f1ecec6b;
             overflow: hidden;
             max-width: 290px;
 
             @include mQ(280px) {
-                min-height: 58vh;
+                height: 78vh;
                 max-width: 263px;
                 margin: 2%;
             }
 
-            @include mQ(320px) {
-                min-height: 75vh;
-            }
-
             @include mQ(539px,375px) {
-                min-height: 60vh;
+                max-height: 60vh;
             }
 
             @include mQ(540px) {
-                min-height: 58vh;
+                max-height: 58vh;
             }
 
             @include mQ(1023px,768px) {
-                min-height: 45vh;
+                max-height: 45vh;
             }
 
             @include mQ(1025px,1024px) {
-                min-height: 34vh;
+                max-height: 34vh;
             }
 
             @include mQ(1920px) {
-                min-height: 556px;
+                max-height: 556px;
                 min-width: 358px;
             }
 
             @include mQ(2280px) {
-                min-height: 619px;
+                max-height: 619px;
                 min-width: 408px;
             }
 
@@ -119,7 +115,7 @@
                 display: flex;
 
                 @include mQ(280px) {
-                    flex: 0;
+                    flex: 1;
                 }
 
                 img {
@@ -147,7 +143,10 @@
                 font-weight: bolder;
 
                 @include mQ(768px, 280px) {
-                    flex: 1;
+                    // flex: 1;
+                    padding: 0 9%;
+                    // max-height: 33vh;
+
                 }
 
                 .promotions-icon {
