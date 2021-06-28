@@ -83,7 +83,7 @@
                 margin: 2%;
             }
 
-            @include mQ(539px,375px) {
+            @include mQ(539px, 375px) {
                 max-height: 60vh;
             }
 
@@ -91,11 +91,11 @@
                 max-height: 58vh;
             }
 
-            @include mQ(1023px,768px) {
+            @include mQ(1023px, 768px) {
                 max-height: 45vh;
             }
 
-            @include mQ(1025px,1024px) {
+            @include mQ(1025px, 1024px) {
                 max-height: 34vh;
             }
 
@@ -143,10 +143,8 @@
                 font-weight: bolder;
 
                 @include mQ(768px, 280px) {
-                    // flex: 1;
                     padding: 0 9%;
-                    // max-height: 33vh;
-
+                    flex: 1;
                 }
 
                 .promotions-icon {
@@ -172,6 +170,8 @@
 
                 .promotions-browse {
                     flex: 1;
+                    display: flex;
+                    align-items: center;
 
                     a {
                         text-decoration: none;

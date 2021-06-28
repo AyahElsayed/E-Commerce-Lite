@@ -88,7 +88,7 @@
                 padding: 0 16%;
             }
 
-            @include mQ(540px,375px) {
+            @include mQ(540px, 375px) {
                 height: 50vh;
                 width: 48vw !important;
                 padding: 0 16%;
@@ -103,7 +103,7 @@
             @include mQ(1025px, 1024px) {
                 width: 13vw !important;
                 height: 27vh;
-                padding: 0px 6%;
+                padding: 0px 8%;
             }
 
             @include mQ(2280px) {
