@@ -91,7 +91,8 @@ export const ProductCard = (props) => {
                         <span className="rate_count">{itemData.rate_count}</span>
                     </div>
                     <div className="discount_product_price">
-                        ${itemData.price} <span className="discount_price">${itemData.discount_price}</span>
+                        <div className="item_price">${itemData.price}</div>
+                        <span className="discount_price">${itemData.discount_price}</span>
                     </div>
                     <div className="stock_count">
                         <div className={`progress_bar ${getProgressBarColor(itemData.stock_count)}`}>

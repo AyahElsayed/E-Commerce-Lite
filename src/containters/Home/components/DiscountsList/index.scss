@@ -171,7 +171,7 @@
                     display: flex;
                     flex: 1;
                     align-items: center;
-                    max-width: 84%;
+                    // max-width: 84%;
 
 
                     @include mQ(2280px) {
@@ -183,6 +183,7 @@
                     display: flex;
                     align-items: center;
                     flex: 1;
+                    justify-content: space-between;
 
                     .rc-rate {
                         @include mQ(768px, 280px) {
@@ -217,18 +218,24 @@
                     color: #0b0b90;
                     font-weight: bolder;
                     flex-wrap: wrap;
+                    justify-content: space-between;
+
 
                     @include mQ(2280px) {
                         font-size: 19px;
                     }
 
                     .discount_price {
-                        flex: 1;
                         font-size: 12px;
                         color: #bdb2b2;
                         text-decoration: line-through;
                         display: flex;
-                        padding-left: 8%;
+                        justify-content: center;
+
+                    }
+
+                    .item_price {
+                        flex: 2;
                     }
                 }
 
