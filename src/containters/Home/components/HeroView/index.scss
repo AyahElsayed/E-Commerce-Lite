@@ -17,7 +17,7 @@
     background-color: #321F96;
 
     @include mQ(360px, 280px) {
-        height: 72vh;
+        height: 84vh;
         padding-top: 7%;
     }
 
@@ -26,7 +26,7 @@
     }
 
     @include mQ(376px, 375px) {
-        height: 62vh;
+        height: 70vh;
     }
 
     @include mQ(1025px, 416px) {
@@ -50,13 +50,18 @@
             align-items: flex-start;
             align-self: stretch;
 
-            @include mQ(374px, 280px) {
+            @include mQ(320px, 280px) {
+                height: 102vh;
+                flex: 2;
+            }
+
+            @include mQ(374px, 321px) {
                 height: 58vh;
                 flex: 2;
             }
 
             @include mQ(376px, 375px) {
-                height: 70vh;
+                height: 82vh;
             }
 
             @include mQ(415px, 377px) {
