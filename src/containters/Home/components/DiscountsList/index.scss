@@ -1,7 +1,38 @@
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
+
 .dscounts_list {
     height: 68vh;
     overflow: hidden;
-    @media (min-width:2280px) {
+
+    @include mQ(280px) {
+        height: 80vh;
+    }
+
+    @include mQ(375px) {
+        height: 70vh;
+    }
+
+    @include mQ(1023px, 768px) {
+        height: 60vh;
+    }
+
+    @include mQ(1025px, 1024px) {
+        height: 40vh;
+    }
+
+    @include mQ(2280px) {
         height: 44vh;
     }
 
@@ -15,13 +46,21 @@
         justify-content: space-between;
 
         .header_title {
-            font-size: 29px;
-            color: #1c0671
+            font-size: 2rem;
+            color: #1c0671;
+
+            @include mQ(770px, 280px) {
+                font-size: 1rem;
+            }
         }
 
         .all_products {
             font-size: .8rem;
             font-weight: 700;
+
+            @include mQ(770px, 280px) {
+                font-size: .5rem;
+            }
 
             a {
                 text-decoration: none;
@@ -39,12 +78,35 @@
             box-shadow: 6px 4px 11px 0px #d2c9c975;
             border-radius: 8px;
             width: 12vw !important;
-            // margin: auto;
             margin-bottom: 12px;
             padding: 0 12%;
-            height: 45vh;
-            
-            @media (min-width:2280px) {
+            height: 46vh;
+
+            @include mQ(370px, 280px) {
+                width: 43vw !important;
+                height: 52vh;
+                padding: 0 16%;
+            }
+
+            @include mQ(540px, 375px) {
+                height: 50vh;
+                width: 48vw !important;
+                padding: 0 16%;
+            }
+
+            @include mQ(768px, 540px) {
+                width: 21vw !important;
+                height: 45vh;
+                padding: 0 17%;
+            }
+
+            @include mQ(1025px, 1024px) {
+                width: 13vw !important;
+                height: 27vh;
+                padding: 0px 8%;
+            }
+
+            @include mQ(2280px) {
                 width: 72% !important;
                 padding: 0 13%;
                 max-height: 32vh;
@@ -63,7 +125,8 @@
                     background-color: #ED67A7;
                     border-radius: 8px;
                     padding: 5px;
-                    @media (min-width:2280px) {
+
+                    @include mQ(2280px) {
                         top: 40px;
                     }
 
@@ -95,7 +158,7 @@
                     font-weight: 500;
                     text-transform: uppercase;
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 14px;
                     }
                 }
@@ -108,10 +171,10 @@
                     display: flex;
                     flex: 1;
                     align-items: center;
-                    max-width: 84%;
+                    // max-width: 84%;
 
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 15px;
                     }
                 }
@@ -120,9 +183,24 @@
                     display: flex;
                     align-items: center;
                     flex: 1;
+                    justify-content: space-between;
+
+                    .rc-rate {
+                        @include mQ(768px, 280px) {
+                            font-size: 11px;
+                        }
+
+                        @include mQ(1025px, 1024px) {
+                            font-size: 8px;
+                        }
+                    }
 
                     .rate_count {
                         font-size: 12px;
+
+                        @include mQ(768px, 280px) {
+                            font-size: 11px;
+                        }
                     }
 
                     .rate_percentage {
@@ -137,20 +215,27 @@
                     align-items: center;
                     font-size: 17px;
                     flex: 1;
-                    color: #0b0b90;;
+                    color: #0b0b90;
                     font-weight: bolder;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
 
-                    @media (min-width:2280px) {
+
+                    @include mQ(2280px) {
                         font-size: 19px;
                     }
 
                     .discount_price {
-                        flex: 1;
                         font-size: 12px;
                         color: #bdb2b2;
                         text-decoration: line-through;
                         display: flex;
-                        padding-left: 8%;
+                        justify-content: center;
+
+                    }
+
+                    .item_price {
+                        flex: 2;
                     }
                 }
 
@@ -160,7 +245,7 @@
                     display: flex;
                     align-items: center;
 
-                    @media (min-width:2280px) {
+                    @include mQ(2280px) {
                         font-size: 15px;
                     }
 
@@ -188,11 +273,10 @@
                     .orangeBar {
                         color: #ffbc00;
                     }
-                    .hotpinkBar{
+
+                    .hotpinkBar {
                         color: hotpink;
                     }
-
-
                 }
             }
 
@@ -203,11 +287,11 @@
                 align-self: flex-start;
                 border-radius: 8px;
                 font-size: 1rem;
-                // min-height: 28px;
                 padding: 0 5px;
                 color: #fff;
                 flex: 1;
-                @media (min-width:2280px) {
+
+                @include mQ(2280px) {
                     flex: .8;
                 }
 
@@ -222,4 +306,16 @@
 
 .slider-container {
     display: block;
+}
+
+.slick-dots {
+    @include mQ(770px, 280px) {
+        bottom: -75px !important;
+    }
+
+    ul {
+        @include mQ(770px, 280px) {
+            padding: 0;
+        }
+    }
 }

@@ -31,7 +31,7 @@ export const Header = () => {
                     <div className="subscribe">
                         <div className="content">
                             <span className="hint">Don't miss out.</span>
-                            <a href="#" className="subscribe_link"> Subscribe Now</a>
+                            <a href="Subscribe" className="subscribe_link"> Subscribe Now</a>
                         </div>
                     </div>
                 </div>

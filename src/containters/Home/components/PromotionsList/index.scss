@@ -1,67 +1,138 @@
-.promotions-List{
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
+
+.promotions-List {
     display: flex;
     height: 65vh;
-    @media (min-width:2280px) {
+
+    @include mQ(280px) {
+        height: 75vh;
+    }
+
+    @include mQ(1024px) {
         height: 50vh;
     }
-    .container{
+
+    .container {
         display: block;
     }
-    .promotions-list-header{
+
+    .promotions-list-header {
         display: flex;
         flex: 1;
         align-items: center;
         justify-content: space-between;
-        .promotions-header-title{
+
+        .promotions-header-title {
             font-size: 29px;
-            color: #1c0671
+            color: #1c0671;
+
+            @include mQ(768px, 280px) {
+                font-size: 1rem;
+            }
         }
-        .all-promotions{
+
+        .all-promotions {
             font-size: .8rem;
             font-weight: 700;
-            a{
+
+            @include mQ(768px, 280px) {
+                font-size: .5rem;
+            }
+
+            a {
                 text-decoration: none;
                 color: #1c0671
             }
         }
     }
-    .promotions-list-contnet{
+
+    .promotions-list-contnet {
         display: flex;
         justify-content: space-between;
-        .promotions-item{
+
+        @include mQ(768px, 280px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .promotions-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 462px;
+            height: 462px;
             border-radius: 11px;
             background-color: #f1ecec6b;
             overflow: hidden;
             max-width: 290px;
-            @media (min-width : 2280px) {
-                min-height: 619px;
-                min-width: 408px;           
+
+            @include mQ(280px) {
+                height: 78vh;
+                max-width: 263px;
+                margin: 2%;
             }
 
-            @media (min-width : 1920px) {
-                min-height: 556px;
-                min-width: 358px;           
+            @include mQ(539px, 375px) {
+                max-height: 60vh;
             }
 
-            .promotions-image{
+            @include mQ(540px) {
+                max-height: 58vh;
+            }
+
+            @include mQ(1023px, 768px) {
+                max-height: 45vh;
+            }
+
+            @include mQ(1025px, 1024px) {
+                max-height: 34vh;
+            }
+
+            @include mQ(1920px) {
+                max-height: 556px;
+                min-width: 358px;
+            }
+
+            @include mQ(2280px) {
+                max-height: 619px;
+                min-width: 408px;
+            }
+
+            .promotions-image {
                 flex: 1;
                 width: 100%;
-                img{
+                display: flex;
+
+                @include mQ(280px) {
+                    flex: 1;
+                }
+
+                img {
                     height: 100%;
                     width: 100%;
                 }
             }
-            .beauty-details{
+
+            .beauty-details {
                 background-color: #e8f8f8;
+
                 @media (min-width:2280px) {
                     padding: 0 21% !important;
                 }
             }
-            .promotions-details{
+
+            .promotions-details {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
@@ -70,36 +141,48 @@
                 padding: 0 18%;
                 color: #1c0671;
                 font-weight: bolder;
-                .promotions-icon{
+
+                @include mQ(768px, 280px) {
+                    padding: 0 9%;
+                    flex: 1;
+                }
+
+                .promotions-icon {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex: 1;
-                    .promotions-list-icon{
+
+                    .promotions-list-icon {
                         font-size: 44px;
                         color: #505053;
                     }
                 }
-                .promotions-desc{
+
+                .promotions-desc {
                     flex: 1;
                     text-align: center;
+
                     @media (min-width:2280px) {
                         font-size: 21px;
                     }
                 }
-                .promotions-browse{
+
+                .promotions-browse {
                     flex: 1;
-                    a{
+                    display: flex;
+                    align-items: center;
+
+                    a {
                         text-decoration: none;
                         background-color: #fff;
                         padding: 11px;
                         border-radius: 8px;
                         box-shadow: 6px 4px 11px 0px #d2c9c975;
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                 }
             }
         }
     }
 }
-

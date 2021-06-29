@@ -1,16 +1,41 @@
-// Header top background-color #340EC1
-// Header search background-color #4D25E0
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
 
 .header-top {
     background-color: #340EC1;
-    height: 60px;
+    height: 9vh;
     color: #fff;
     display: flex;
+
+    @include mQ(770px, 320px) {
+        height: 9vh;
+    }
+
+    @include mQ(1025px, 780px) {
+        height: 5vh;
+    }
 
     .header-top-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mQ(760px, 280px) {
+            flex-direction: column;
+            align-items: stretch;
+            height: 7vh;
+        }
     }
 
     .shipping {
@@ -19,6 +44,15 @@
         align-items: center;
         flex: 4;
         justify-content: flex-start;
+
+        @include mQ(770px, 320px) {
+            flex: 1;
+            align-self: center;
+        }
+
+        @include mQ(1025px, 780px) {
+            flex: 2.7;
+        }
 
         .desc {
             font-size: 12px;
@@ -64,21 +98,44 @@
 
 .header_search_bar {
     background-color: #4D25E0;
-    height: 90px;
+    height: 11vh;
     color: #fff;
     display: flex;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    @include mQ(768px, 280px) {
+        height: 28vh;
+    }
+
+    @include mQ(1025px, 780px) {
+        height: 7vh;
+    }
 
     .container {
         justify-content: space-around;
         margin: auto;
         align-items: center;
 
+        @include mQ(768px, 280px) {
+            flex-direction: column;
+            height: 80%;
+        }
+
         .logo {
             flex: 1;
-            font-size: 27px;
+            font-size: 2rem;
             font-weight: 300;
             display: flex;
+
+            @include mQ(768px, 280px) {
+                flex: 4;
+                align-items: center;
+            }
+
+            @include mQ(1025px, 780px) {
+                flex: .9;
+                font-size: 1.9rem;
+            }
 
             .subLogo {
                 font-weight: 500;
@@ -92,12 +149,25 @@
             align-items: center;
             position: relative;
 
+            @include mQ(768px, 280px) {
+                width: 80%;
+                flex-wrap: wrap-reverse;
+            }
+
+            @include mQ(1025px, 780px) {
+                flex: 2;
+            }
+
             .dropdown {
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
                 position: relative;
                 flex: 2;
+
+                @include mQ(1025px, 780px) {
+                    flex: 3;
+                }
             }
 
             .btn_dropdown {
@@ -111,6 +181,11 @@
                 justify-content: center;
                 align-items: center;
                 flex: 1;
+
+                @include mQ(768px, 280px) {
+                    height: 33px;
+                    border-radius: 8px;
+                }
 
                 .dropdown_des {
                     justify-content: flex-end;
@@ -132,6 +207,11 @@
                 border-style: none;
                 text-indent: 2%;
 
+                @include mQ(768px, 280px) {
+                    height: 31px !important;
+                    border-radius: 8px;
+                }
+
                 &:focus-visible {
                     outline: none;
                 }
@@ -142,6 +222,18 @@
                 position: absolute;
                 right: 2%;
                 top: 32%;
+
+                @include mQ(280px) {
+                    top: 16%;
+                }
+
+                @include mQ(768px) {
+                    top: 40%;
+                }
+
+                @include mQ(1025px, 780px) {
+                    top: 27%;
+                }
             }
 
             .menu {
@@ -153,6 +245,10 @@
                 border-radius: 6px;
                 overflow: hidden;
 
+                @include mQ(280px) {
+                    z-index: 1;
+                }
+
                 .btn_menu {
                     height: 40px;
                     border-style: none;
@@ -161,6 +257,7 @@
                     border-bottom: 1px solid #d4cece;
                     font-size: 1em;
                     font-weight: 600;
+                    transition: width 600ms ease-out, height 600ms ease-out;
 
 
                     &:hover {
@@ -174,6 +271,14 @@
             flex: .8;
             display: flex;
             justify-content: center;
+
+            @include mQ(768px, 280px) {
+                flex: 3;
+            }
+
+            @include mQ(1025px, 780px) {
+                flex: .6;
+            }
 
             button {
                 background-color: transparent;
@@ -195,6 +300,15 @@
                     display: inline-block;
                     left: 72%;
                     top: 17%;
+
+                    @include mQ(768px, 280px) {
+                        left: 100%;
+                        top: 30%;
+                    }
+
+                    @include mQ(1025px, 780px) {
+                        left: 84%;
+                    }
                 }
             }
 
@@ -207,6 +321,10 @@
                 border-radius: 6px;
                 overflow: hidden;
 
+                @include mQ(280px) {
+                    width: 100%;
+                }
+
 
                 .btn_menu {
                     color: #000;
@@ -215,7 +333,6 @@
                     border-bottom: 1px solid #d4cece;
                     font-size: 1rem;
                     font-weight: 600;
-
 
                     &:hover {
                         background: #e9e6e6;
@@ -230,6 +347,10 @@
             background: #f9f6f645;
             height: 36px;
             margin: 0 1%;
+
+            @include mQ(768px, 280px) {
+                display: none;
+            }
         }
 
         .lang {
@@ -304,6 +425,7 @@
                     width: 1.9em;
                     justify-content: center;
                     height: 1.9em;
+                    margin: 0 7px;
                 }
             }
         }
