@@ -1,23 +1,9 @@
-import React from 'react';
-import './Header/index.scss';
 import { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
 import { FiShoppingCart } from 'react-icons/fi';
 
-export const NavBar = () => {
-
-    return (
-        <>
-            <LargeNavBar />
-            <MobileNavBar />
-        </>
-    )
-
-};
-
-
-const LargeNavBar = () => {
+export const LargeNavBar = () => {
 
     const [isMenuShown, setIsMenuShown] = useState(false)
     const [isAccountMenuShown, setIsAccountMenuShown] = useState(false)
@@ -107,15 +93,3 @@ const LargeNavBar = () => {
     )
 
 };
-
-
-const MobileNavBar = () => {
-
-    return (
-        <>
-
-        </>
-    )
-
-};
-

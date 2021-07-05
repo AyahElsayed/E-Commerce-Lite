@@ -1,6 +1,6 @@
 import './index.scss'
 import { MdLocalShipping } from 'react-icons/md'
-import { NavBar } from '../NavBar';
+import { NavBar } from '../NavBar/NavBar';
 
 export const Header = () => {
 
