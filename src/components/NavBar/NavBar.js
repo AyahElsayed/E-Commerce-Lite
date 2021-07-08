@@ -1,15 +1,16 @@
 import React from 'react';
 import '../Header/index';
 
-import { MobileNavBar } from './MobileNavBar';
-import { LargeNavBar } from './LargeNavBar';
+// import { LargeNavBar } from './LargeNavBar';
+import { MobileNavBar } from './MobileNavBar.js';
 
 export const NavBar = () => {
 
     return (
         <>
-            <LargeNavBar />
+            {/* <LargeNavBar /> */}
             <MobileNavBar />
+
         </>
     )
 
